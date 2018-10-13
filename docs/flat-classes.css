@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.9
+/*! flat.csss v1.0.10
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -1002,27 +1002,27 @@ button.flat-button:not([type]),
 
 .flat-h1 {
   font-size: 2em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-h2 {
   font-size: 1.5em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-h3 {
   font-size: 1.17em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-h4 {
   font-size: 1em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-h5 {
   font-size: 0.83em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-h6 {
   font-size: 0.67em;
-  line-height: 1.6em; }
+  line-height: 1.2em; }
 
 .flat-p, .flat-pre, .flat-address, .flat-blockquote {
   margin: 1em 0; }
