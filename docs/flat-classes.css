@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.13
+/*! flat.csss v1.0.14
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -91,7 +91,7 @@ https://areve.github.io/flatcss/ */
   vertical-align: baseline;
   margin-bottom: .16em;
   display: inline-block;
-  height: 2em;
+  min-height: 2em;
   line-height: 2em;
   position: relative; }
 

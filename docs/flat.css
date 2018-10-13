@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.13 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.14 https://areve.github.io/flatcss/ */
 /* flat-default.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -684,7 +684,7 @@ button,
   vertical-align: baseline;
   margin-bottom: .16em;
   display: inline-block;
-  height: 2em;
+  min-height: 2em;
   line-height: 2em;
   position: relative; }
 

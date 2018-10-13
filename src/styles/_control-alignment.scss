@@ -28,7 +28,7 @@
     margin: 0;
     @include vertical-align-baseline;
     display: inline-block;
-    height: $core__control__height; 
+    min-height: $core__control__height; 
     line-height: $core__control__height; // vertically centers text on links
     position: relative;
   }
