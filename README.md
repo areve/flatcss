@@ -7,7 +7,7 @@ See the [Demo and Documenation](https://areve.github.io/flatcss/)
 Install by adding this to inside the HTML head tag.
 
 ```
-<link href="flat.css" rel="stylesheet" type="text/css" media="screen">
+<link href="https://cdn.jsdelivr.net/npm/flatcss/dist/flat.css" rel="stylesheet" type="text/css" media="screen">
 ```
 
 or you can install with **npm** 

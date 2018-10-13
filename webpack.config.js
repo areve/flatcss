@@ -8,6 +8,8 @@ const WebpackShellPlugin = require('webpack-shell-plugin')
 const WebpackAutoInject = require('webpack-auto-inject-version')
 
 module.exports = (env, argv) => {
+  const autoIncreaseVersion = argv.mode === 'production'
+
   const plugins = [
     new MiniCssExtractPlugin({
       filename: '[name].css',
@@ -40,8 +42,8 @@ module.exports = (env, argv) => {
     }),
     new WebpackAutoInject({
       components: {
-        AutoIncreaseVersion: false,
-        InjectAsComment: false,
+        AutoIncreaseVersion: autoIncreaseVersion,
+        InjectAsComment: true,
         InjectByTag: true
       }
     })
