@@ -196,6 +196,7 @@
   
   // forms
   %flat-fieldset {
+    @include content-block;
     border-style: none;
     padding: 0;
     padding-top: $core__container__padding-size;
