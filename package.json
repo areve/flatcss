@@ -1,5 +1,5 @@
 {
-    "name": "flat.css",
+    "name": "flatcss",
     "version": "1.0.6",
     "description": "Write some HTML5, add flat.css, and nothing else (no javascript). It is lightweight and easy to build on top of.",
     "scripts": {
