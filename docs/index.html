@@ -1,0 +1,234 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>flat.css</title>
+  <meta charset="utf-8">
+  <link href="flat.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+
+    <h1>flat.css <small>1.0.6</small></h1>
+    <blockquote>Write some HTML5, add <strong>flat.css</strong>, and nothing else (no javascript). It is lightweight
+      and easy to build on top of.</blockquote>
+
+    <p>Or build all your styles on top. <strong>flat.css</strong> does not give you any fancy widgets, it just styles
+      every HTML5 element and makes it flow on the page without any fuss. There is only one <code>button</code> class
+      to learn everything else is automatic when you add the stylesheet with <code>&lt;link href="flat.css" rel="stylesheet" type="text/css" media="screen"&gt;</code>.</p>
+  </header>
+
+  <main>
+    <section>
+      <h1>Semantic Tags</h1>
+      <p>All HTML5 tags are styled learn them and use them.</p>
+      <figure>
+        <figcaption>
+          Examples of styling.
+        </figcaption>
+        <h2>Heading</h2>
+        <p>Your text may use <em>emphasis</em>, or be <strong>stronger</strong>. You may <s>strikethrough</s>, <u>underline</u>
+          or <mark>highlight</mark>
+          it. You may want to indicate <ins>inserted</ins> or <del>deleted</del> text. Show <code>code</code> or <kbd>keyboard</kbd>
+          entry, <sub>subscript</sub> or <sup>superscript</sup>.</p>
+        <p>You may start another paragraph and include an image.</p>
+        <img src="assets/flat-moon100.jpg">
+
+        <p> An image on a link will hightlight as you hover over it like this one. <a href="#"><img src="assets/flat-moon100.jpg"></a></p>
+
+        <p>Links try to be on one line <a href="#">even if they are long like this one</a>.</p>
+
+        <blockquote>You may have a block quote to show.</blockquote>
+        <h3>Use some lists</h3>
+        <ul>
+          <li>Unordered list item 1</li>
+          <li>Unordered list item 2</li>
+        </ul>
+        <ol>
+          <li>Ordered list item 1</li>
+          <li>Ordered list item 2</li>
+        </ol>
+        <dl>
+          <dt>Definition list title 1</dt>
+          <dd>This is the first definition</dd>
+          <dt>Definition list title 2</dt>
+          <dd>This is the second definition</dd>
+        </dl>
+        <h3>Use Tables</h3>
+        <p>Here is an example table.</p>
+        <table>
+          <caption>a table</caption>
+          <thead>
+            <tr>
+              <th>Heading 1</th>
+              <th>Heading 2</th>
+              <th>Heading 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cell 1</td>
+              <td>Cell 2</td>
+              <td>Cell 3</td>
+            </tr>
+            <tr>
+              <td>Cell 4</td>
+              <td>Cell 5</td>
+              <td>Cell 6</td>
+            </tr>
+            <tr>
+              <td>Cell 7</td>
+              <td>Cell 8</td>
+              <td>Cell 9</td>
+            </tr>
+          </tbody>
+        </table>
+      </figure>
+    </section>
+    <section>
+      <h1>Buttons</h1>
+      <p>Buttons align correctly next to text and other buttons, no matter what type of button.</p>
+      <p>Only one class is supplied with <strong>flat.css</strong>, apply <code>class="button"</code> to an <code>&lt;a&gt;</code>
+        tag <em>(or virtually any other tag)</em> to make it appear as a button.</p>
+      <figure>
+        <figcaption>
+          Buttons in line with text.
+        </figcaption>
+        <p>
+          Text
+          <button type="button">Button</button>
+          text
+          <input type="button" value="Input Button">
+          <a href="#" class="button">Link Button</a>
+          text.
+        </p>
+      </figure>
+
+      <p>Buttons have different colours for submit, reset and disabled.</p>
+      <figure>
+        <figcaption>
+          Different button states.
+        </figcaption>
+        <p>
+          <button type="button">Button</button>
+          <input type="button" value="Input Button">
+          <button>Submit Button</button>
+          <input type="submit" value="Input Submit">
+          <button type="reset">Reset Button</button>
+          <input type="reset" value="Input Reset">
+        </p>
+        <p>
+          <button type="button" disabled>Button</button>
+          <input type="button" value="Input Button" disabled>
+          <button disabled>Submit Button</button>
+          <input type="submit" value="Input Submit" disabled>
+          <button type="reset" disabled>Reset Button</button>
+          <input type="reset" value="Input Reset" disabled>
+        </p>
+      </figure>
+
+      <p>Buttons size can be adjusted by altering the font size. Either by setting the wrapping with a <code>&lt;small&gt;</code>
+        tag; or you can alter the <code>font-size</code> in your stylesheet.</p>
+      <figure>
+        <figcaption>
+          Different sized buttons by text.
+        </figcaption>
+        <small>text <button type="button">Small</button></small>
+        <button type="button">Normal</button> text
+      </figure>
+
+    </section>
+
+    <section>
+      <h1>Forms</h1>
+      <p>All HTML form tags are styled to look fairly similar cross browser. All will sit neatly aligned when next to
+        each other.</p>
+      <figure>
+        <figcaption>
+          Form elements in one line.
+        </figcaption>
+        <label>Text
+          <input type="text" placeholder="Some text">
+        </label>
+        <label>Checkbox
+          <input type="checkbox" checked>
+        </label>
+        <label>Yes
+          <input name="yesno" type="radio" checked>
+        </label>
+        <label>No
+          <input name="yesno" type="radio">
+        </label>
+        <label>Color
+          <input type="color" value="#ffcc00">
+        </label>
+        <select>
+          <option>Select</option>
+        </select>
+        <button>Button</button>
+      </figure>
+      <p>To layout forms in other ways use <code>&lt;div&gt;</code> tag to separate elements, or simply extend with
+        your own stylesheet.</p>
+      <figure>
+        <figcaption>
+          Arranged form elements.
+        </figcaption>
+        <div>
+          <label>
+            Text <em>(Required)</em>
+            <div><input type="text" placeholder="enter text" required></div>
+          </label>
+        </div>
+        <div>
+          <label>
+            Textarea <em>(Required)</em>
+            <div><textarea placeholder="enter more text" required>some text</textarea></div>
+          </label>
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" checked>
+            Checkbox
+          </label>
+        </div>
+        <button>Button</button>
+      </figure>
+    </section>
+
+    <section>
+      <h1>Anything else?</h1>
+      <p>
+        <strong>flat.css</strong> is all about making the best of HTML5 without using javascript; there is nothing
+        else really. This allows you to include this stylesheet in any project no matter what scripting framework you use - there is no need to add a framework specific module for <strong>flat.css</strong>. If you need grids, icons, more complex controls make or find your own. This project aims to style HTML elements only.</p>
+      <p>
+        The most common HTML5 components are listed on this page. The test pages below have all of the others tags in
+        many combinations.</p>
+      <ul>
+        <li><a href="tags.html">Tags</a> - All HTML5 Tags on one page.</li>
+        <li><a href="forms.html">Forms</a> - All Forms components in many combinations.</li>
+        <li><a href="tests.html">Tests</a> - A page to check things are working.</li>
+      </ul>
+
+      <h2>Advanced</h2>
+      <p>In the dist folder of this project are multiple css files, you only need is <strong>flat.css</strong>.</p>
+      <ul>
+        <li><strong>flat.css</strong> - Styles all HTML5 tags and has one class <code>class="button"</code> to make other things look like buttons too.</li>
+        <li><strong>flat-classes.css</strong> - It styles no HTML5 tags instead providing classes for them all. If you use this instead of then add <code>class="flat-<em>tagname</em>"</code> to every tag you want to style. e.g. <code>&lt;a href="#"&gt;</code> becomes <code>&lt;a href="#" class="flat-a" &gt;</code>. This version does not include sanitize.css</li>
+        <li><strong>flat-colourless.css</strong> - This is for a test page only, it does not have coloured buttons.</li>
+      </ul>
+      <h2>Acknowledgments</h2>
+      <ul>
+        <li><a href="https://picnicss.com/">Picnic CSS</a> is great, and heavily enspired me, it'd got a bit more complicated than I needed though.</li>
+        <li><a href="https://csstools.github.io/sanitize.css/">sanitize.css</a>is included to make things easier for me.</li>
+        <li><a href="#">It is open source, feel free to extend it, get in touch with suggestions for improvements.</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

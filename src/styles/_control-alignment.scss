@@ -1,0 +1,123 @@
+/* _control-alignment.scss */
+
+@mixin vertical-align-baseline {
+  @if $enable-control-alignment {
+    vertical-align: baseline;
+    margin-bottom: .16em;
+  }
+}
+
+@mixin vertical-align-baseline--fix-wonky-control
+{
+  @if $enable-control-alignment {
+    vertical-align: middle;
+    margin-bottom: .32em;
+  }
+}
+
+@mixin vertical-align-baseline--fix-overflow-hidden
+{
+  @if $enable-control-alignment {
+    vertical-align: bottom;
+    margin-bottom: .16em;
+  }
+}
+
+@mixin flat-button-alignment {
+  @if $enable-control-alignment {
+    margin: 0;
+    @include vertical-align-baseline;
+    display: inline-block;
+    height: $core__control__height; 
+    line-height: $core__control__height; // vertically centers text on links
+    position: relative;
+  }
+}
+
+@if $enable-control-alignment {
+  %flat-select,
+  %flat-output,
+  %flat-progress,
+  %flat-meter,
+  %flat-textarea,
+  %flat-input[type=checkbox] ,
+  %flat-input[type=radio],
+  %flat-input[type=text],
+  %flat-input[type=search],
+  %flat-input[type=range],
+  %flat-input[type=tel],
+  %flat-input[type=url],
+  %flat-input[type=color],
+  %flat-input[type=email],
+  %flat-input[type=password],
+  %flat-input[type=date],
+  %flat-input[type=month],
+  %flat-input[type=week],
+  %flat-input[type=time],
+  %flat-input[type=local],
+  %flat-input[type=number],
+  %flat-input[type=file],
+  %flat-input:not([type]) {
+    @include vertical-align-baseline;
+    display: inline-block;
+    position: relative;
+    height: $core__control__height;
+    padding: $core__input__padding;
+  }
+
+  %flat-input {
+    &[type=file] {
+      @include vertical-align-baseline;
+      height: $core__control__height; 
+    }
+
+    &[type=color],
+    &[type=range],
+    &[type=image] {
+      @include vertical-align-baseline--fix-wonky-control;
+    }
+      
+    &[type=checkbox] ,
+    &[type=radio] {
+      @include vertical-align-baseline--fix-wonky-control;
+      margin-top: $core__control__height * 1/8;
+      margin-bottom: $core__control__height * 1/8;
+      height: $core__control__height * 6/8;
+      width: $core__control__height * 6/8;
+    }
+  }
+
+  %flat-progress {
+    @include vertical-align-baseline--fix-wonky-control;
+  }
+
+  %flat-meter {
+    @include vertical-align-baseline--fix-wonky-control;
+  }
+
+  %flat-output {
+    @include vertical-align-baseline--fix-wonky-control;
+    // The text alignment is slightly off on this elment (Chrome)
+    line-height: $core__control__height * 0.95; 
+  }
+
+  %flat-label {
+    @include vertical-align-baseline;
+    display: inline-block;
+    min-height: $core__control__height;
+  }
+
+  // buttons
+  %flat-label%flat-button {
+    @include vertical-align-baseline--fix-overflow-hidden;  
+  }
+
+  %flat-select,
+  %flat-input[type=file],
+  %flat-input[type=submit], 
+  %flat-input[type=reset], 
+  %flat-input[type=button], 
+  %flat-button {
+    @include flat-button-alignment;
+  }
+}

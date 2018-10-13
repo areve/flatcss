@@ -1,0 +1,94 @@
+/* _core.scss */
+
+// semantic colors
+$core__success__color: #0b0 !default; 
+$core__optional__color: #aaa !default; 
+$core__error__color: #f00 !default;
+$core__samp-kbd-var__background-color: #9cf !default;
+$core__code__background-color: #eed !default;
+$core__mark__background-color: #ff0 !default;
+
+$core__control__validation--border-width: 3px;
+
+// tables
+$core__th__background-color: #ddd !default;
+$core__th__color: #000 !default;
+$core__even-row__background-color: #f2f2f2 !default;
+$core__odd-row__background-color: #fff !default;
+
+// controls
+$core__control__background-color: #fcfcfc !default;
+$core__control__color: #111 !default;
+$core__control__height: 2em !default;
+$core__control__width: 12em;
+
+// general
+$core__background-color: #fff !default;
+$core__color: #111 !default;
+$core__border-width: 1px !default;
+$core__border-color: #ccc !default;
+$core__border: $core__border-width solid $core__border-color !default;
+
+$core__indent-size: 1.5em !default;
+$core__indent-size--bullet: $core__indent-size + 1.5em !default;
+$core__vertical-padding-size: 1em !default;
+$core__small-pad: .3em !default;
+
+// padding
+$core__text__padding: $core__small-pad / 3 $core__small-pad !default;
+$core__cell__padding: $core__small-pad $core__small-pad * 3 !default;
+$core__input__padding: 0 $core__small-pad !default;
+$core__button__padding: 0 $core__small-pad * 3 !default;
+$core__container__padding-size: 1em !default;
+
+// headings
+$core__h1__font-size: 2em !default;
+$core__h2__font-size: 1.5em !default;
+$core__h3__font-size: 1.17em !default;
+$core__h4__font-size: 1em !default;
+$core__h5__font-size: 0.83em !default;
+$core__h6__font-size: 0.67em !default;
+
+// button colors
+$core__button__background-color: #eee;
+$core__button__color: #111;
+$core__button-submit__background-color: #0074d9 !default;
+$core__button-submit__color: #fff !default;
+$core__button-reset__background-color: #d94500 !default;
+$core__button-reset__color: #fff !default;
+
+// options
+$enable-control-alignment: true !default;
+$enable-styling: true !default;
+$enable-semantic-colors: true !default;
+$enable-bustout-prevention: true !default;
+
+// mixins
+@mixin highlight {
+  @if $enable-styling {
+    filter: brightness(110%);
+  }
+}
+
+@mixin highlight-2 {
+  @if $enable-styling {
+    filter: brightness(130%);
+  }
+}
+
+@mixin lowlight {
+  @if $enable-styling {
+    filter: brightness(95%);
+  }
+}
+
+@function disable-color($color) {
+  $target: #ccc;
+  @return  mix($target, desaturate(lighten($color, 30%), 50%), 50%);
+}
+
+@function readonly-color($color) {
+  $target: #ccc;
+  @return  mix($target, desaturate($color, 50%), 25%);
+}
+

@@ -1,0 +1,39 @@
+{
+    "name": "flat.css",
+    "version": "1.0.6",
+    "description": "Write some HTML5, add flat.css, and nothing else (no javascript). It is lightweight and easy to build on top of.",
+    "scripts": {
+        "dev": "webpack --mode development --watch --env.patch",
+        "build": "webpack --mode production --env.patch"
+    },
+    "author": "Andrew Challen",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.0.1",
+        "autoprefixer": "^9.1.5",
+        "babel-loader": "^8.0.2",
+        "babel-preset-env": "^1.7.0",
+        "browser-sync": "^2.24.7",
+        "browser-sync-webpack-plugin": "^2.2.2",
+        "clean-webpack-plugin": "^0.1.19",
+        "copy-webpack-plugin": "^4.5.2",
+        "copyfiles": "^2.1.0",
+        "css-loader": "^1.0.0",
+        "cssnano": "^4.1.4",
+        "html-entities": "^1.2.1",
+        "html-webpack-plugin": "^3.2.0",
+        "mini-css-extract-plugin": "^0.4.2",
+        "node-sass": "^4.9.3",
+        "postcss-assets": "^5.0.0",
+        "postcss-loader": "^3.0.0",
+        "rimraf": "^2.6.2",
+        "sanitize.css": "^7.0.3",
+        "sass-loader": "^7.1.0",
+        "standard": "^12.0.1",
+        "style-loader": "^0.23.0",
+        "webpack": "^4.18.0",
+        "webpack-auto-inject-version": "^1.1.0",
+        "webpack-cli": "^3.1.0",
+        "webpack-shell-plugin": "^0.5.0"
+    }
+}

@@ -1,0 +1,17 @@
+/*! flat.css v[AIV]{version}[/AIV] http://https://github.com/areve/flatcss/ */
+
+/* flat-default.scss */
+
+$classes-all: false;
+$classes-prefix: '';
+
+@import '../../node_modules/sanitize.css/sanitize.css';
+@import 'unsanitize';
+
+@import 'core';
+@import 'control-alignment';
+@import 'control-styling';
+@import 'general-styling';
+@import 'theme';
+@import 'tags';
+@import 'classes';

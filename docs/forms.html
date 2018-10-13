@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>HTML5 Elements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="flat.css">
+  <style>
+    .choose-file {
+      width: 7.08em;
+    }
+    </style>
+
+</head>
+
+<body>
+  <nav>
+    <a href="/">Home</a>
+  </nav>
+
+  <header>
+    <h1>Forms</h1>
+    <p>This page shows different permutations of forms.</p>
+  </header>
+
+  <main>
+    <section>
+      <h1>Buttons</h1>
+      <p>Anything tag be styled to look like a button by adding <code>class="button"</code>, the buttons should
+        all line up in a horizontal line.
+      </p>
+      <figure>
+        <figcaption>Enabled buttons with different tags</figcaption>
+        <p>
+          <button>button</button>
+          <input type="button" value="input:button">
+          <input type="reset" value="input:reset">
+          <input type="submit" value="input:submit">
+          <span class="button" tabindex="0">span</span>
+          <a href="#" class="button">a:href</a>
+          <label class="button">label:file
+            <input type="file" placeholder="file">
+          </label>
+        </p>
+      </figure>
+      <figure>
+        <figcaption>Disabled buttons with different tags</figcaption>
+        <p>
+          <button disabled>button</button>
+          <input disabled type="button" value="input:button">
+          <input disabled type="reset" value="input:reset">
+          <input disabled type="submit" value="input:submit">
+          <span disabled class="button">span</span>
+          <label disabled for="input-file" class="button">label:file
+            <input id="input-file" type="file" placeholder="file" disabled>
+          </label>
+        </p>
+        <p>
+          <em>
+            There is no <code>a</code> tag because they don't support disabled, and the alternatives are not worth
+            implementing.
+          </em>
+        </p>
+      </figure>
+    </section>
+
+    <section>
+      <h1>States</h1>
+      <p>Many form elements support disabled and readonly states.</p>
+      <figure>
+        <figcaption>Form elements with different states</figcaption>
+        <table>
+          <tr>
+            <th>
+              <div>Normal</div>
+              <div>Required</div>
+            </th>
+            <th>
+              <div>Valid</div>
+              <div>Invalid</div>
+            </th>
+            <th>
+              <div>Disabled</div>
+              <div>Readonly</div>
+            </th>
+          </tr>
+          <tr>
+            <td><button>button</button></td>
+            <td><button disabled>button</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>
+              <div><input placeholder=""></div>
+              <div><input placeholder="" required></div>
+            </td>
+            <td>
+              <div><input value="valid" pattern="valid"></div>
+              <div><input value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input placeholder="" readonly></div>
+              <div><input placeholder="" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="text" placeholder="text"></div>
+              <div><input type="text" placeholder="text" required></div>
+            </td>
+            <td>
+              <div><input type="text" value="valid" pattern="valid"></div>
+              <div><input type="text" value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input type="text" placeholder="text" readonly></div>
+              <div><input type="text" placeholder="text" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea placeholder="textarea"></textarea>
+              <textarea placeholder="textarea" required></textarea>
+            </td>
+            <td>
+              <textarea placeholder="textarea" minlength="5">valid</textarea>
+              <textarea placeholder="textarea" required></textarea>
+            </td>
+            <td>
+              <textarea placeholder="textarea" disabled></textarea>
+              <textarea placeholder="textarea" readonly></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div>
+                <select>
+                  <option>select</option>
+                </select>
+              </div>
+              <div>
+                <select required>
+              <option></option>
+              <option>select</option>
+              </select>
+            </td>
+            <td>
+              <div>
+                <select required>
+                  <option value="">invalid</option>
+                  <option selected value="valid">valid</option>
+                </select>
+              </div>
+              <div>
+                <select required>
+                  <option value="">invalid</option>
+                  <option value="valid">valid</option>
+                </select>
+              </div>
+            </td>
+            <td>
+              <select disabled>
+                <option>select</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="search" placeholder="search"></div>
+              <div><input type="search" placeholder="search" required></div>
+            </td>
+            <td>
+              <div><input type="search" value="valid" pattern="valid"></div>
+              <div><input type="search" value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input type="search" placeholder="search" readonly></div>
+              <div><input type="search" placeholder="search" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="tel" placeholder="tel"></div>
+              <div><input type="tel" placeholder="tel" required></div>
+            </td>
+            <td>
+              <div><input type="tel" value="valid" pattern="valid"></div>
+              <div><input type="tel" value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input type="tel" placeholder="tel" readonly></div>
+              <div><input type="tel" placeholder="tel" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="url" placeholder="url"></div>
+              <div><input type="url" placeholder="url" required></div>
+            </td>
+            <td>
+              <div><input type="url" value="http://example.com" pattern="https?://.+"></div>
+              <div><input type="url" value="invalid" pattern="http://.+"></div>
+            </td>
+            <td>
+              <div><input type="url" placeholder="url" readonly></div>
+              <div><input type="url" placeholder="url" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="email" placeholder="email"></div>
+              <div><input type="email" placeholder="email" required></div>
+            </td>
+            <td>
+              <div><input type="email" value="valid@example.com" pattern="\w+@\w+\.\w+"></div>
+              <div><input type="email" value="invalid" pattern="\w+@\w+\.\w+"></div>
+            </td>
+            <td>
+              <div><input type="email" placeholder="email" readonly></div>
+              <div><input type="email" placeholder="email" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="password" placeholder="password"></div>
+              <div><input type="password" placeholder="password" required></div>
+            </td>
+            <td>
+              <div><input type="password" value="valid" pattern="valid"></div>
+              <div><input type="password" value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input type="password" placeholder="password" readonly></div>
+              <div><input type="password" placeholder="password" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="date" placeholder="date"></div>
+              <div><input type="date" placeholder="date" required></div>
+            </td>
+            <td>
+              <div><input type="date" value="2001-01-01" max="2001-01-01"></div>
+              <div><input type="date" value="2001-01-02" max="2001-01-01"></div>
+            </td>
+            <td>
+              <div><input type="date" placeholder="date" readonly></div>
+              <div><input type="date" placeholder="date" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="month" placeholder="month"></div>
+              <div><input type="month" placeholder="month" required></div>
+            </td>
+            <td>
+              <div><input type="month" value="2001-01" max="2001-01"></div>
+              <div><input type="month" value="2001-02" max="2001-01"></div>
+            </td>
+            <td>
+              <div><input type="month" placeholder="month" readonly></div>
+              <div><input type="month" placeholder="month" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="week" placeholder="week"></div>
+              <div><input type="week" placeholder="week" required></div>
+            </td>
+            <td>
+              <div><input type="week" value="2001-W01" max="2001-W01"></div>
+              <div><input type="week" value="2001-W02" max="2001-W01"></div>
+            </td>
+            <td>
+              <div><input type="week" placeholder="week" readonly></div>
+              <div><input type="week" placeholder="week" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="time" placeholder="time"></div>
+              <div><input type="time" placeholder="time" required></div>
+            </td>
+            <td>
+              <div><input type="time" value="12:34" max="12:34"></div>
+              <div><input type="time" value="12:35" max="12:34"></div>
+            </td>
+            <td>
+              <div><input type="time" placeholder="time" readonly></div>
+              <div><input type="time" placeholder="time" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="local" placeholder="local"></div>
+              <div><input type="local" placeholder="local" required></div>
+            </td>
+            <td>
+              <div><input type="local" value="valid" pattern="valid"></div>
+              <div><input type="local" value="invalid" pattern="valid"></div>
+            </td>
+            <td>
+              <div><input type="local" placeholder="local" readonly></div>
+              <div><input type="local" placeholder="local" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="number" placeholder="number"></div>
+              <div><input type="number" placeholder="number" required></div>
+            </td>
+            <td>
+              <div><input type="number" value="1234" min="1234" max="2345"></div>
+              <div><input type="number" value="9999" min="1234" max="2345"></div>
+            </td>
+            <td>
+              <div><input type="number" placeholder="number" readonly></div>
+              <div><input type="number" placeholder="number" disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="range" placeholder="range"></td>
+            <td></td>
+            <td>
+              <div><input type="range" placeholder="range" disabled></div>
+              <div><input type="range" placeholder="range" readonly disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="color" value="#cc99ff"></td>
+            <td></td>
+            <td>
+              <div><input type="color" value="#cc99ff" disabled></div>
+              <div><input type="color" value="#cc99ff" readonly disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="checkbox" placeholder="checkbox" checked></div>
+              <div><input type="checkbox" placeholder="checkbox" required></div>
+            </td>
+            <td>
+              <input type="checkbox" placeholder="checkbox" checked required>
+            </td>
+            <td>
+              <div><input type="checkbox" placeholder="checkbox" checked required disabled></div>
+              <div><input type="checkbox" placeholder="checkbox" checked readonly disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="radio" placeholder="radio" checked></div>
+              <div><input type="radio" name="radio1" placeholder="radio" required></div>
+            </td>
+            <td>
+              <div><input type="radio" name="radio2" placeholder="radio" required checked></div>
+              <div><input type="radio" name="radio1" placeholder="radio" required></div>
+            </td>
+            <td>
+              <div><input type="radio" placeholder="radio" checked required disabled></div>
+              <div><input type="radio" placeholder="radio" checked readonly disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div><input type="file" placeholder="file" class="choose-file"></div>
+              <div><input type="file" placeholder="file" class="choose-file" required></div>
+            </td>
+            <td></td>
+            <td>
+              <div><input type="file" placeholder="file" class="choose-file" disabled></div>
+              <div><input type="file" placeholder="file" class="choose-file" readonly disabled></div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="submit"></td>
+            <td></td>
+            <td><input type="submit" disabled></td>
+          </tr>
+          <tr>
+            <td><input type="image" src="assets/button32.png"></td>
+            <td></td>
+            <td><input type="image" src="assets/button32.png" disabled></td>
+          </tr>
+          <tr>
+            <td><input type="reset"></td>
+            <td></td>
+            <td><input type="reset" disabled></td>
+          </tr>
+          <tr>
+            <td><input type="button" value="Button"></td>
+            <td></td>
+            <td><input type="button" value="Button" disabled></td>
+          </tr>
+        </table>
+      </figure>
+    </section>
+  </main>
+
+</body>
+
+</html>
