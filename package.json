@@ -1,6 +1,6 @@
 {
     "name": "flatcss",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "Write some HTML5, add flat.css, be happy. It is lightweight, easy to build on top of, and no javascript",
     "scripts": {
         "dev": "webpack --mode development --watch --env.patch",
