@@ -1,3 +1,3 @@
-/* flat.css v[AIV]{version}[/AIV] http://https://github.com/areve/flatcss/ */
+/* flat.css v[AIV]{version}[/AIV] https://areve.github.io/flatcss/ */
 
 import '../styles/flat-default.scss';

@@ -2,7 +2,7 @@
 
 > Write some HTML5, add **flat.css**, and nothing else (no javascript). It is lightweight and easy to build on top of.
       
-See the [Demo and Documenation](http://https://github.com/areve/flatcss/)
+See the [Demo and Documenation](https://areve.github.io/flatcss/)
 
 Install by adding this to inside the HTML head tag.
 
