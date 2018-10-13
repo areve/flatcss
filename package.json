@@ -1,13 +1,14 @@
 {
     "name": "flatcss",
-    "version": "1.0.10",
-    "description": "Write some HTML5, add flat.css, and nothing else (no javascript). It is lightweight and easy to build on top of.",
+    "version": "1.0.11",
+    "description": "Write some HTML5, add flat.css, be happy. It is lightweight, easy to build on top of, and no javascript",
     "scripts": {
         "dev": "webpack --mode development --watch --env.patch",
         "build": "webpack --mode production --env.patch"
     },
     "author": "Andrew Challen",
     "license": "ISC",
+    "main": "flat.css",
     "devDependencies": {
         "@babel/core": "^7.0.1",
         "autoprefixer": "^9.1.5",

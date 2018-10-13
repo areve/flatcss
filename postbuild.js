@@ -11,9 +11,9 @@ rimraf('docs/*.js', (err) => {
 })
 
 if (verbose) console.log('Creating dist')
-copyfiles(['docs/*.css', 'dist'], { verbose, up: 1 }, () =>{
-  minify('dist/flat.css')
-  minify('dist/flat-classes.css')
+copyfiles(['docs/flat.css', 'docs/flat-classes.css','.'], { verbose, up: 1 }, () =>{
+  minify('flat.css')
+  minify('flat-classes.css')
 })
 
 function minify(path) {

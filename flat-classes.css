@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.10
+/*! flat.csss v1.0.11
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -996,7 +996,6 @@ button.flat-button:not([type]),
 
 .flat-body {
   line-height: 1.6em;
-  padding: 4em;
   background-color: #fff;
   color: #111; }
 
@@ -1376,7 +1375,8 @@ button.flat-button:not([type]),
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1em;
   max-width: 960px;
-  margin: auto; }
+  margin: auto;
+  padding: 3em 3%; }
 
 .flat-fieldset {
   border-radius: 0.33333em;

@@ -21,7 +21,7 @@ module.exports = (env, argv) => {
       template: './src/templates/index.html',
       filename: 'index.html'
     }),
-    new CleanWebpackPlugin(['dist/*', 'docs/*'], {}),
+    new CleanWebpackPlugin(['docs/*', '*.css'], {}),
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
