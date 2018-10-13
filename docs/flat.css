@@ -1,5 +1,4 @@
-/** [AIV_SHORT]  Build version: 1.0.8 - Saturday, October 13th, 2018, 4:14:36 PM  **/ 
- /*! sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
+/*! sanitize.css v7.0.3 | CC0 License | github.com/csstools/sanitize.css */
 
 /* Document
  * ========================================================================== */
@@ -587,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.8 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.9 https://areve.github.io/flatcss/ */
 /* flat-default.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -1605,22 +1604,28 @@ body {
   color: #111; }
 
 h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.6em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  line-height: 1.6em; }
 
 h3 {
-  font-size: 1.17em; }
+  font-size: 1.17em;
+  line-height: 1.6em; }
 
 h4 {
-  font-size: 1em; }
+  font-size: 1em;
+  line-height: 1.6em; }
 
 h5 {
-  font-size: 0.83em; }
+  font-size: 0.83em;
+  line-height: 1.6em; }
 
 h6 {
-  font-size: 0.67em; }
+  font-size: 0.67em;
+  line-height: 1.6em; }
 
 p, pre, address, blockquote {
   margin: 1em 0; }
@@ -1687,6 +1692,7 @@ mark {
   background-color: #ff0; }
 
 table {
+  margin: 1em 0;
   background-color: #f2f2f2; }
 
 caption {
@@ -2005,4 +2011,3 @@ th {
 /* _tags.scss */
 /* _classes.scss */
 
- 

@@ -24,12 +24,12 @@
     color: $core__color;
   }
 
-  %flat-h1 { font-size: $core__h1__font-size; }
-  %flat-h2 { font-size: $core__h2__font-size; }
-  %flat-h3 { font-size: $core__h3__font-size; }
-  %flat-h4 { font-size: $core__h4__font-size; }
-  %flat-h5 { font-size: $core__h5__font-size; }
-  %flat-h6 { font-size: $core__h6__font-size; }
+  %flat-h1 { font-size: $core__h1__font-size; line-height: 1.6em; }
+  %flat-h2 { font-size: $core__h2__font-size; line-height: 1.6em; }
+  %flat-h3 { font-size: $core__h3__font-size; line-height: 1.6em; }
+  %flat-h4 { font-size: $core__h4__font-size; line-height: 1.6em; }
+  %flat-h5 { font-size: $core__h5__font-size; line-height: 1.6em; }
+  %flat-h6 { font-size: $core__h6__font-size; line-height: 1.6em; }
   
   // semantic blocks
   %flat-p, %flat-pre, %flat-address, %flat-blockquote { 
@@ -133,6 +133,7 @@
   
   // tables
   %flat-table {
+    @include content-block;
     background-color: $core__even-row__background-color;
   }
   

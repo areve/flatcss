@@ -1,5 +1,4 @@
-/** [AIV_SHORT]  Build version: 1.0.8 - Saturday, October 13th, 2018, 4:14:36 PM  **/ 
- /*! flat.csss v1.0.8
+/*! flat.csss v1.0.9
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -1002,22 +1001,28 @@ button.flat-button:not([type]),
   color: #111; }
 
 .flat-h1 {
-  font-size: 2em; }
+  font-size: 2em;
+  line-height: 1.6em; }
 
 .flat-h2 {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+  line-height: 1.6em; }
 
 .flat-h3 {
-  font-size: 1.17em; }
+  font-size: 1.17em;
+  line-height: 1.6em; }
 
 .flat-h4 {
-  font-size: 1em; }
+  font-size: 1em;
+  line-height: 1.6em; }
 
 .flat-h5 {
-  font-size: 0.83em; }
+  font-size: 0.83em;
+  line-height: 1.6em; }
 
 .flat-h6 {
-  font-size: 0.67em; }
+  font-size: 0.67em;
+  line-height: 1.6em; }
 
 .flat-p, .flat-pre, .flat-address, .flat-blockquote {
   margin: 1em 0; }
@@ -1084,6 +1089,7 @@ button.flat-button:not([type]),
   background-color: #ff0; }
 
 .flat-table {
+  margin: 1em 0;
   background-color: #f2f2f2; }
 
 .flat-caption {
@@ -1398,4 +1404,3 @@ button.flat-button:not([type]),
 
 /* _classes.scss */
 
- 

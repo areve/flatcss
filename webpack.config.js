@@ -43,7 +43,7 @@ module.exports = (env, argv) => {
     new WebpackAutoInject({
       components: {
         AutoIncreaseVersion: autoIncreaseVersion,
-        InjectAsComment: true,
+        InjectAsComment: false,
         InjectByTag: true
       }
     })
