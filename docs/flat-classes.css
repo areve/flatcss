@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.12
+/*! flat.csss v1.0.13
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -1134,6 +1134,7 @@ button.flat-button:not([type]),
   margin: 1em 0; }
 
 .flat-fieldset {
+  margin: 1em 0;
   border-style: none;
   padding: 0;
   padding-top: 1em; }

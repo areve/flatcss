@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.12 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.13 https://areve.github.io/flatcss/ */
 /* flat-colorless.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -1685,6 +1685,7 @@ noscript {
   margin: 1em 0; }
 
 fieldset {
+  margin: 1em 0;
   border-style: none;
   padding: 0;
   padding-top: 1em; }
