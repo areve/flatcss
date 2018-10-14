@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="Description" content="tests for flat.css all html5 tas">
+  <meta name="Description" content="tests for flat.css all html5 tags">
+  <meta name="theme-color" content="#0074d9">
   <title>HTML5 Elements</title>
   <link rel="stylesheet" type="text/css" media="screen" href="flat.css">
   <link rel="stylesheet" type="text/css" media="screen" href="flat-classes.css">
@@ -114,7 +115,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
         <figcaption>Example figure with an image</figcaption>
         <figure>
           <figcaption>Example figcaption</figcaption>
-          <img src="assets/flat-moon100.jpg">
+          <img src="assets/flat-moon100.jpg" alt="Example image, the moon">
         </figure>
       </figure>
     </section>
@@ -165,7 +166,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
       <figure>
         <figcaption>Examples of all semantic text styling tags</figcaption>
         <ul>
-          <li><a href="#">a link in an <code>a</code> tag.</a></li>
+          <li><a href="#">a link</a> in an <code>a</code> tag.</li>
           <li><em>Emphasis in an <code>em</code> tag.</em></li>
           <li><strong>Strong text in a <code>strong</code> tag.</strong></li>
           <li><i>Italic text in a <code>i</code> tag.</i></li>
@@ -173,9 +174,9 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
           <li><u>Underlined text in a <code>u</code> tag.</u></li>
           <li>Subscript text<sub> in a <code>sub</code> tag.</sub></li>
           <li>Superscript text<sup> in a <code>sup</code> tag.</sup></li>
-          <li><ins>Text that has been inserted in an <code>ins</code> tag.</ins></li>
-          <li><del>Text removed in a <code>del</code> tag.</del></li>
-          <li>Text can be <small>small in a <code>small</code> tag.</small></li>
+          <li><ins>Text that has been inserted</ins> in an <code>ins</code> tag.</li>
+          <li><del>Text removed</del> in a <code>del</code> tag.</li>
+          <li>Text can be <small>small</small> in a <code>small</code> tag.</li>
           <li>An abbreviation <abbr title="Abbreviation">abbr</abbr> in a <code>abbr</code> tag.</li>
           <li><cite>A citation in a <code>cite</code> tag.</cite></li>
           <li><q>A short quotation in a <code>q</code> tag.</q></li>
@@ -294,21 +295,21 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
       </p>
       <figure>
         <figcaption>Image will shrink to fit</figcaption>
-        <img src="assets/flat-moon.jpg">
+        <img src="assets/flat-moon.jpg" alt="Example image, the moon">
       </figure>
 
       <figure>
         <figcaption>Example image in link</figcaption>
         <p>
           This is an example image in a link
-          <a href="#"><img src="assets/flat-moon100.jpg"></a>
+          <a href="#"><img src="assets/flat-moon100.jpg" alt="Example image, the moon"></a>
         </p>
       </figure>
       <figure>
         <figcaption>Example picture</figcaption>
         <picture>
           <source media="(min-width: 650px)" srcset="assets/flat-moon100.jpg">
-          <img src="assets/flat-moon100.jpg">
+          <img src="assets/flat-moon100.jpg" alt="Example image, the moon">
         </picture>
       </figure>
       <figure>
@@ -318,7 +319,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
         <a href="#">
           <picture>
             <source media="(min-width: 650px)" srcset="assets/flat-moon100.jpg">
-            <img src="assets/flat-moon100.jpg">
+            <img src="assets/flat-moon100.jpg" alt="Example image, the moon">
           </picture>
         </a>
       </figure>
@@ -356,6 +357,8 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
         <video width="320" height="240" controls autostart="0">
           <source src="assets/sample.ogv" type="video/ogg">
           <track src="assets/subtitles-en.vtt" kind="subtitles" srclang="en" label="English">
+          <track src="assets/subtitles-en.vtt" kind="captions" srclang="en" label="English">
+          <track src="assets/subtitles-en.vtt" kind="description" srclang="en" label="English">
         </video>
       </figure>
 
@@ -371,7 +374,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
           Probably don't use the <code>object</code> and <code>embed</code> tags. Use <code>video</code> and <code>audio</code>
           tags where possible.
         </p>
-        <object data="assets/silence.ogg">
+        <object data="assets/silence.ogg" alt="Example of a silent audio file">
           <param name="autoplay" value="false">
           <param name="autostart" value="0">
         </object>
@@ -380,7 +383,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
 
       <figure>
         <figcaption>Example iframe.</figcaption>
-        <iframe src="assets/example.html"></iframe>
+        <iframe src="assets/example.html" title="Example iframe"></iframe>
       </figure>
 
     </section>
@@ -532,7 +535,7 @@ using <u>code</u> inside a <u>pre</u> tag.</code></pre>
           <input id="input-submit" type="submit" placeholder="submit">
 
           <label for="input-image">Label for image</label>
-          <input id="input-image" type="image" src="assets/button32.png">
+          <input id="input-image" type="image" src="assets/button32.png" alt="Example image button">
 
           <label for="input-reset">Label for reset</label>
           <input id="input-reset" type="reset" placeholder="reset">

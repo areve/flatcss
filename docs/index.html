@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="Description" content="Write some HTML5, add flat.css, be happy. It is lightweight, easy to build on top of, and no javascript.">
+  <meta name="theme-color" content="#0074d9">
   <title>flat.css</title>
   <meta charset="utf-8">
   <link href="flat.css" rel="stylesheet" type="text/css" media="screen">
@@ -31,7 +32,7 @@
 
     <p>Or build all your styles on top. <strong>flat.css</strong> does not give you any fancy widgets, it just styles
       every HTML5 element and makes it flow on the page without any fuss. There is only one <code>button</code> class
-      to learn everything else is automatic when you add the stylesheet with <code>&lt;link href="https://unpkg.com/flatcss@1.0.14/flat.css" rel="stylesheet" type="text/css" media="screen"&gt;</code>.</p>
+      to learn everything else is automatic when you add the stylesheet with <code>&lt;link href="https://unpkg.com/flatcss@1.0.15/flat.css" rel="stylesheet" type="text/css" media="screen"&gt;</code>.</p>
 
 
   </header>
@@ -50,9 +51,10 @@
           it. You may want to indicate <ins>inserted</ins> or <del>deleted</del> text. Show <code>code</code> or <kbd>keyboard</kbd>
           entry, <sub>subscript</sub> or <sup>superscript</sup>.</p>
         <p>You may start another paragraph and include an image.</p>
-        <img src="assets/flat-moon100.jpg">
+        <img src="assets/flat-moon100.jpg" alt="Example image, the moon">
 
-        <p> An image on a link will hightlight as you hover over it like this one. <a href="#"><img src="assets/flat-moon100.jpg"></a></p>
+        <p> An image on a link will hightlight as you hover over it like this one. <a href="#"><img src="assets/flat-moon100.jpg"
+              alt="Example image, the moon"></a></p>
 
         <p>Links try to be on one line <a href="#">even if they are long like this one</a>.</p>
 
@@ -180,9 +182,10 @@
         <label>Color
           <input type="color" value="#ffcc00">
         </label>
-        <select>
-          <option>Select</option>
-        </select>
+        <label><select>
+            <option>Select</option>
+          </select>
+        </label>
         <button>Button</button>
       </figure>
       <p>To layout forms in other ways use <code>&lt;div&gt;</code> tag to separate elements, or simply extend with

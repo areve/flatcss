@@ -1,9 +1,9 @@
 /* _core.scss */
 
 // semantic colors
-$core__success__color: #0b0 !default; 
+$core__success__color: #008A00 !default; 
 $core__optional__color: #aaa !default; 
-$core__error__color: #f00 !default;
+$core__error__color: #EB0000 !default;
 $core__samp-kbd-var__background-color: #9cf !default;
 $core__code__background-color: #eed !default;
 $core__mark__background-color: #ff0 !default;
@@ -54,7 +54,7 @@ $core__button__background-color: #eee;
 $core__button__color: #111;
 $core__button-submit__background-color: #0074d9 !default;
 $core__button-submit__color: #fff !default;
-$core__button-reset__background-color: #d94500 !default;
+$core__button-reset__background-color: #D64300 !default;
 $core__button-reset__color: #fff !default;
 
 // options
@@ -84,7 +84,7 @@ $enable-bustout-prevention: true !default;
 
 @function disable-color($color) {
   $target: #ccc;
-  @return  mix($target, desaturate(lighten($color, 30%), 50%), 50%);
+  @return  mix($target, desaturate(lighten($color, 0%), 50%), 42%);
 }
 
 @function readonly-color($color) {
