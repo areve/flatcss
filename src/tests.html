@@ -8,7 +8,7 @@
   <meta name="Description" content="tests for flat.css components">
   <meta name="theme-color" content="#0074d9">
   <title>HTML5 Elements</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="flat.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="flat-core.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127468929-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -331,6 +331,7 @@
       <p>When labels styled as buttons with different content sit together<br>
         Then they all a vertically aligned similarly.</p>
       <div class="test">
+        <label class="button">foo</label>
         <label class="button">foo <input type="checkbox"></label>
         <label class="button">foo <input type="radio"></label>
         <label class="button">foo <input type="color"></label>

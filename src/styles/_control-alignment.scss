@@ -105,6 +105,23 @@
     @include vertical-align-baseline;
     display: inline-block;
     min-height: $core__control__height;
+
+    &%flat-button {
+      %flat-select,
+      %flat-output,
+      %flat-progress,
+      %flat-meter,
+      %flat-textarea,
+      %flat-input {
+        margin-bottom: 0;
+      }
+      %flat-input[type=range],
+      %flat-input[type=color] {
+        margin-bottom: -.4em;
+        margin-top: -.6em;
+      }
+
+    }
   }
 
   // buttons
