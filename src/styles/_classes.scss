@@ -1,7 +1,7 @@
 /* _classes.scss */
 
-$classes-prefix: 'flat-' !default;
-$classes-all: true !default;
+$classes-prefix: '' !default;
+$classes-all: false !default;
 $classes-toolkit: true !default;
 
 @if $classes-all {

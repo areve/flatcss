@@ -2,6 +2,9 @@
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 
+$classes-all: true;
+$classes-prefix: 'flat-';
+
 @import 'core';
 @import 'control-alignment';
 @import 'control-styling';

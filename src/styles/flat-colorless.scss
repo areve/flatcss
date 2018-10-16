@@ -2,8 +2,6 @@
 /* flat-colorless.scss */
 
 $enable-semantic-colors: false;
-$classes-all: false;
-$classes-prefix: '';
 
 @import   '../../node_modules/sanitize.css/sanitize.css';
 @import 'unsanitize';

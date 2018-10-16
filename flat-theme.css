@@ -2,66 +2,57 @@
 /* flat-theme.scss */
 /* _core.scss */
 /* _theme.scss */
-a, .flat-a {
+a {
   -webkit-transition: all .3s;
   transition: all .3s;
   color: #0074d9;
   text-decoration: none; }
-  a:active, .flat-a:active, a:hover, .flat-a:hover {
+  a:active, a:hover {
     text-decoration: underline; }
-  a:focus, .flat-a:focus {
+  a:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
     z-index: 1; }
     @supports (-ms-ime-align: auto) {
-      a:focus, .flat-a:focus {
+      a:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-input[type=submit], .flat-input[type=submit],
+input[type=submit],
 input[type=reset],
-.flat-input[type=reset],
 input[type=button],
-.flat-input[type=button],
 select,
-.flat-select,
 button,
-.flat-button {
+.button {
   border-radius: 0.33333em;
   -webkit-transition: all .3s;
   transition: all .3s;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
-  input[type=submit]:focus, .flat-input[type=submit]:focus,
+  input[type=submit]:focus,
   input[type=reset]:focus,
-  .flat-input[type=reset]:focus,
   input[type=button]:focus,
-  .flat-input[type=button]:focus,
   select:focus,
-  .flat-select:focus,
   button:focus,
-  .flat-button:focus {
+  .button:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
     z-index: 1; }
     @supports (-ms-ime-align: auto) {
-      input[type=submit]:focus, .flat-input[type=submit]:focus,
+      input[type=submit]:focus,
       input[type=reset]:focus,
-      .flat-input[type=reset]:focus,
       input[type=button]:focus,
-      .flat-input[type=button]:focus,
       select:focus,
-      .flat-select:focus,
       button:focus,
-      .flat-button:focus {
+      .button:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-label.flat-button:focus-within, button.flat-label:focus-within, .flat-label.flat-button:focus-within {
+label.button:focus-within {
   outline: none;
   -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
           box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
@@ -69,12 +60,12 @@ label.flat-button:focus-within, button.flat-label:focus-within, .flat-label.flat
   -webkit-filter: brightness(110%);
           filter: brightness(110%); }
   @supports (-ms-ime-align: auto) {
-    label.flat-button:focus-within, button.flat-label:focus-within, .flat-label.flat-button:focus-within {
+    label.button:focus-within {
       -webkit-box-shadow: none;
               box-shadow: none;
       outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-input[type=file]::-webkit-file-upload-button, .flat-input[type=file]::-webkit-file-upload-button {
+input[type=file]::-webkit-file-upload-button {
   border-radius: 0.33333em;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -83,236 +74,167 @@ input[type=file]::-webkit-file-upload-button, .flat-input[type=file]::-webkit-fi
   background-color: #eee;
   color: #111; }
 
-input[type=file]:focus::-webkit-file-upload-button, .flat-input[type=file]:focus::-webkit-file-upload-button {
+input[type=file]:focus::-webkit-file-upload-button {
   -webkit-filter: brightness(95%);
           filter: brightness(95%); }
 
-input[type=range]::-webkit-slider-thumb, .flat-input[type=range]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: 0.33333em;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-input[type=range]::-moz-range-thumb, .flat-input[type=range]::-moz-range-thumb {
+input[type=range]::-moz-range-thumb {
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: 0.33333em;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-input[type=range]::-ms-thumb, .flat-input[type=range]::-ms-thumb {
+input[type=range]::-ms-thumb {
   -webkit-transition: all .3s;
   transition: all .3s;
   border-radius: 0.33333em;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-output, .flat-output,
+output,
 meter,
-.flat-meter,
 textarea,
-.flat-textarea,
 input:not([type]),
-.flat-input:not([type]),
 input[type=text],
-.flat-input[type=text],
 input[type=search],
-.flat-input[type=search],
 input[type=range],
-.flat-input[type=range],
 input[type=tel],
-.flat-input[type=tel],
 input[type=url],
-.flat-input[type=url],
 input[type=color],
-.flat-input[type=color],
 input[type=email],
-.flat-input[type=email],
 input[type=password],
-.flat-input[type=password],
 input[type=date],
-.flat-input[type=date],
 input[type=month],
-.flat-input[type=month],
 input[type=week],
-.flat-input[type=week],
 input[type=time],
-.flat-input[type=time],
 input[type=local],
-.flat-input[type=local],
 input[type=number],
-.flat-input[type=number],
-input[type=file],
-.flat-input[type=file] {
+input[type=file] {
   border-radius: 0.33333em;
   -webkit-transition: all .3s;
   transition: all .3s; }
-  output:focus, .flat-output:focus,
+  output:focus,
   meter:focus,
-  .flat-meter:focus,
   textarea:focus,
-  .flat-textarea:focus,
   input:not([type]):focus,
-  .flat-input:not([type]):focus,
   input[type=text]:focus,
-  .flat-input[type=text]:focus,
   input[type=search]:focus,
-  .flat-input[type=search]:focus,
   input[type=range]:focus,
-  .flat-input[type=range]:focus,
   input[type=tel]:focus,
-  .flat-input[type=tel]:focus,
   input[type=url]:focus,
-  .flat-input[type=url]:focus,
   input[type=color]:focus,
-  .flat-input[type=color]:focus,
   input[type=email]:focus,
-  .flat-input[type=email]:focus,
   input[type=password]:focus,
-  .flat-input[type=password]:focus,
   input[type=date]:focus,
-  .flat-input[type=date]:focus,
   input[type=month]:focus,
-  .flat-input[type=month]:focus,
   input[type=week]:focus,
-  .flat-input[type=week]:focus,
   input[type=time]:focus,
-  .flat-input[type=time]:focus,
   input[type=local]:focus,
-  .flat-input[type=local]:focus,
   input[type=number]:focus,
-  .flat-input[type=number]:focus,
-  input[type=file]:focus,
-  .flat-input[type=file]:focus {
+  input[type=file]:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
     z-index: 1; }
     @supports (-ms-ime-align: auto) {
-      output:focus, .flat-output:focus,
+      output:focus,
       meter:focus,
-      .flat-meter:focus,
       textarea:focus,
-      .flat-textarea:focus,
       input:not([type]):focus,
-      .flat-input:not([type]):focus,
       input[type=text]:focus,
-      .flat-input[type=text]:focus,
       input[type=search]:focus,
-      .flat-input[type=search]:focus,
       input[type=range]:focus,
-      .flat-input[type=range]:focus,
       input[type=tel]:focus,
-      .flat-input[type=tel]:focus,
       input[type=url]:focus,
-      .flat-input[type=url]:focus,
       input[type=color]:focus,
-      .flat-input[type=color]:focus,
       input[type=email]:focus,
-      .flat-input[type=email]:focus,
       input[type=password]:focus,
-      .flat-input[type=password]:focus,
       input[type=date]:focus,
-      .flat-input[type=date]:focus,
       input[type=month]:focus,
-      .flat-input[type=month]:focus,
       input[type=week]:focus,
-      .flat-input[type=week]:focus,
       input[type=time]:focus,
-      .flat-input[type=time]:focus,
       input[type=local]:focus,
-      .flat-input[type=local]:focus,
       input[type=number]:focus,
-      .flat-input[type=number]:focus,
-      input[type=file]:focus,
-      .flat-input[type=file]:focus {
+      input[type=file]:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-input[type=image], .flat-input[type=image],
-input[type=color],
-.flat-input[type=color] {
+input[type=image],
+input[type=color] {
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-input[type=checkbox], .flat-input[type=checkbox],
-input[type=radio],
-.flat-input[type=radio], input[type=image], .flat-input[type=image] {
+input[type=checkbox],
+input[type=radio], input[type=image] {
   -webkit-transition: all .3s;
   transition: all .3s; }
-  input[type=checkbox]:focus, .flat-input[type=checkbox]:focus,
+  input[type=checkbox]:focus,
   input[type=radio]:focus,
-  .flat-input[type=radio]:focus,
-  input[type=image]:focus,
-  .flat-input[type=image]:focus {
+  input[type=image]:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
     z-index: 1; }
     @supports (-ms-ime-align: auto) {
-      input[type=checkbox]:focus, .flat-input[type=checkbox]:focus,
+      input[type=checkbox]:focus,
       input[type=radio]:focus,
-      .flat-input[type=radio]:focus,
-      input[type=image]:focus,
-      .flat-input[type=image]:focus {
+      input[type=image]:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-input[type=checkbox]:before, .flat-input[type=checkbox]:before,
+input[type=checkbox]:before,
 input[type=checkbox]:after,
-.flat-input[type=checkbox]:after,
 input[type=radio]:before,
-.flat-input[type=radio]:before,
-input[type=radio]:after,
-.flat-input[type=radio]:after {
+input[type=radio]:after {
   -webkit-transition: all .3s;
   transition: all .3s; }
 
-progress[value]::-moz-progress-bar, .flat-progress[value]::-moz-progress-bar {
+progress[value]::-moz-progress-bar {
   border-radius: 0.33333em; }
 
-progress[value]::-webkit-progress-bar, .flat-progress[value]::-webkit-progress-bar {
+progress[value]::-webkit-progress-bar {
   border-radius: 0.33333em; }
 
-progress[value]::-webkit-progress-value, .flat-progress[value]::-webkit-progress-value {
+progress[value]::-webkit-progress-value {
   border-radius: 0.33333em; }
 
-input[type=image][value]::-moz-progress-bar, .flat-input[type=image][value]::-moz-progress-bar {
+input[type=image][value]::-moz-progress-bar {
   -webkit-transition: all .3s;
   transition: all .3s; }
 
-input[type=image][value]::-webkit-progress-bar, .flat-input[type=image][value]::-webkit-progress-bar {
+input[type=image][value]::-webkit-progress-bar {
   -webkit-transition: all .3s;
   transition: all .3s; }
 
-pre, .flat-pre,
+pre,
 code,
-.flat-code,
 var,
-.flat-var,
 samp,
-.flat-samp,
 kbd,
-.flat-kbd,
 tt,
-.flat-tt,
-mark,
-.flat-mark {
+mark {
   border-radius: 0.33333em; }
 
-figure, .flat-figure {
+figure {
   border-radius: 0.33333em;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-figcaption, .flat-figcaption {
+figcaption {
   margin-bottom: 1em; }
 
-blockquote, .flat-blockquote, address, .flat-address {
+blockquote, address {
   font-style: italic; }
 
-body, .flat-body {
+body {
   background-color: #fff;
   color: #111;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -321,14 +243,14 @@ body, .flat-body {
   margin: auto;
   padding: 3em 3%; }
 
-fieldset, .flat-fieldset {
+fieldset {
   border-radius: 0.33333em;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   padding: 1em;
   border: 1px solid #ccc; }
 
-legend, .flat-legend {
+legend {
   border-radius: 0.33333em;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
@@ -336,12 +258,12 @@ legend, .flat-legend {
   border: 1px solid #ccc;
   padding: 0.1em 0.3em; }
 
-table, .flat-table {
+table {
   border: 1px solid #ccc;
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12); }
 
-th, .flat-th {
+th {
   background-color: #d9edff; }
 
 /* _tags.scss */
