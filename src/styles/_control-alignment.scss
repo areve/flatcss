@@ -3,7 +3,6 @@
 @mixin vertical-align-baseline {
   @if $enable-control-alignment {
     vertical-align: baseline;
-    margin-bottom: .16em;
   }
 }
 
@@ -11,16 +10,16 @@
 {
   @if $enable-control-alignment {
     vertical-align: middle;
-    margin-bottom: .32em;
+    margin-bottom: -.4em;
+    margin-top: -.6em;
   }
 }
 
 @mixin vertical-align-baseline--fix-overflow-hidden
 {
   @if $enable-control-alignment {
-    vertical-align: bottom;
-    margin-bottom: .16em;
-  }
+      vertical-align: bottom;
+    }
 }
 
 @mixin flat-button-alignment {
@@ -67,8 +66,7 @@
 
   %flat-input {
     &[type=file] {
-      @include vertical-align-baseline;
-      height: $core__control__height; 
+      @include vertical-align-baseline--fix-wonky-control;
     }
 
     &[type=color],
@@ -80,10 +78,10 @@
     &[type=checkbox] ,
     &[type=radio] {
       @include vertical-align-baseline--fix-wonky-control;
-      margin-top: $core__control__height * 1/8;
-      margin-bottom: $core__control__height * 1/8;
       height: $core__control__height * 6/8;
       width: $core__control__height * 6/8;
+      margin-bottom: -.5em;
+      margin-top: -.5em;  
     }
   }
 
@@ -105,23 +103,6 @@
     @include vertical-align-baseline;
     display: inline-block;
     min-height: $core__control__height;
-
-    &%flat-button {
-      %flat-select,
-      %flat-output,
-      %flat-progress,
-      %flat-meter,
-      %flat-textarea,
-      %flat-input {
-        margin-bottom: 0;
-      }
-      %flat-input[type=range],
-      %flat-input[type=color] {
-        margin-bottom: -.4em;
-        margin-top: -.6em;
-      }
-
-    }
   }
 
   // buttons

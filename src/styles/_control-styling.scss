@@ -229,6 +229,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
   %flat-input[type=button], 
   %flat-button {
     @include flat-button-styling;
+    text-decoration: none;
     &:focus,
     &:active,
     &:hover:not([disabled]) {
@@ -389,28 +390,11 @@ $controls__progress__color: $core__button-submit__background-color !default;
     }
   }
 
-  %flat-input[type=checkbox],
-  %flat-input[type=radio] {
-    &:required {
-      &::before {
-        //@include validation-highlight;
-        //TODO 
-        //border-left-width: $core__border-width;
-        //border-left-color: $core__border-color; // TODO could use SVG check and cross instead
-      }
-    }
-    &:invalid {
-      &::before {
-        //@include validation-highlight($core__error__color);
-      }
-    }
-  }
-
   %flat-input[type=color] {
     -webkit-appearance: none;
     padding: 5px;
-    width: $core__control__height;
-    height: $core__control__height;
+    width: $core__control__height * 15/16;
+    height: $core__control__height * 15/16;
     background-color: $core__control__background-color;
     @media screen and (-webkit-min-device-pixel-ratio:0) {
       padding: 1px 3px; // set padding on ms and chrome
@@ -429,7 +413,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
 
   %flat-input[type=range] {
     appearance: none;
-    height: $core__control__height;
+    height: $core__control__height * 15/16;
     width: $core__control__width;
     background-color: $core__control__background-color; // for ms
     &[disabled] ,
