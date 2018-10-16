@@ -8,7 +8,7 @@
   <meta name="Description" content="tests for flat.css components">
   <meta name="theme-color" content="#0074d9">
   <title>HTML5 Elements</title>
-  <link rel="stylesheet" type="text/css" media="screen" href="flat-colorless.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="flat.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127468929-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -73,13 +73,13 @@
         <li>Check focus</li>
       </ul>
       <div class="test">
-        <button>foo</button>
+        <button class="standard">foo</button>
         <button type="button">foo</button>
-        <button type="submit">foo</button>
-        <button type="reset">foo</button>
+        <button type="submit" class="standard">foo</button>
+        <button type="reset" class="standard">foo</button>
         <input type="button" value="foo">
-        <input type="submit" value="foo">
-        <input type="reset" value="foo">
+        <input type="submit" class="standard" value="foo">
+        <input type="reset" class="standard" value="foo">
         <a class="button" tabindex="0" href="#">foo</a>
         <span class="button" tabindex="0">foo</span>
         <label class="button" tabindex="0">foo</label>
@@ -92,7 +92,8 @@
 
     <article>
       <h2>Buttons without spaces</h2>
-      <p>When buttons of different types all sit next to each other without spaces between.<br>Then they all look the identical and are
+      <p>When buttons of different types all sit next to each other without spaces between.<br>Then they all look the
+        identical and are
         aligned.</p>
       <ul>
         <li>Check looks</li>
@@ -100,22 +101,53 @@
         <li>Check focus</li>
       </ul>
       <div class="test">
-        <button>foo</button><!--
-        --><button type="button">foo</button><!--
-        --><button type="submit">foo</button><!--
-        --><button type="reset">foo</button><!--
-        --><input type="button" value="foo"><!--
-        --><input type="submit" value="foo"><!--
-        --><input type="reset" value="foo"><!--
-        --><a class="button" tabindex="0" href="#">foo</a><!--
-        --><span class="button" tabindex="0">foo</span><!--
-        --><label class="button" tabindex="0">foo</label><!--
-        --><p class="button" tabindex="0">foo</p><!--
-        --><p class="button" tabindex="0">foo</p><!--
-        --><div class="button" tabindex="0">foo</div>
+        <button class="standard">foo</button><button type="button">foo</button><button type="submit" class="standard">foo</button><button type="reset" class="standard">foo</button><input
+          type="button" value="foo"><input type="submit" value="foo" class="standard"><input type="reset" value="foo" class="standard"><a class="button"
+          tabindex="0" href="#">foo</a><span class="button" tabindex="0">foo</span><label class="button" tabindex="0">foo</label><p class="button" tabindex="0">foo</p><div class="button" tabindex="0">foo</div>
       </div>
     </article>
 
+    <figure>
+        <figcaption>All buttons styled to look like submit buttons with <code>class="primary"</code></figcaption>
+        <p>
+          <button class="primary">button</button>
+          <button type="submit">button:submit</button>
+          <button type="reset" class="primary">button:reset</button>
+          <button type="button" class="primary">button:button</button>
+          <input type="submit" value="input:submit">
+          <input type="button" value="input:button" class="primary">
+          <input type="reset" value="input:reset" class="primary">
+          <a href="#" class="button primary">a:href</a>
+        </p>
+      </figure>
+      <figure>
+        <figcaption>All buttons styled to look like reset buttons with <code>class="negative"</code></figcaption>
+        <p>
+          <button class="negative">button</button>
+          <button type="submit" class="negative">button:submit</button>
+          <button type="reset">button:reset</button>
+          <button type="button" class="negative">button:button</button>
+          <input type="submit" value="input:submit" class="negative">
+          <input type="button" value="input:button" class="negative">
+          <input type="reset" value="input:reset">
+          <a href="#" class="button negative">a:href</a>
+        </p>
+      </figure>
+
+      <figure>
+        <figcaption>All buttons styled to look like standard buttons with <code>class="standard"</code></figcaption>
+        <p>
+          <button class="standard">button</button>
+          <button type="submit" class="standard">button:submit</button>
+          <button type="reset" class="standard">button:reset</button>
+          <button type="button" class="standard">button:button</button>
+          <input type="submit" value="input:submit" class="standard">
+          <input type="button" value="input:button" class="standard">
+          <input type="reset" value="input:reset" class="standard">
+          <a href="#" class="button">a:href</a>
+        </p>
+      </figure>
+    
     <article>
       <h2>Buttons next to text</h2>
       <p>When buttons are next to text.<br>Then the text all sits on the same line.</p>
@@ -125,13 +157,13 @@
         <li>Check focus</li>
       </ul>
       <div class="test">
-        <button>foo</button> foo
+        <button class="standard">foo</button> foo
         <button type="button">foo</button> foo
-        <button type="submit">foo</button> foo
-        <button type="reset">foo</button> foo
+        <button type="submit" class="standard">foo</button> foo
+        <button type="reset" class="standard">foo</button> foo
         <input type="button" value="foo"> foo
-        <input type="submit" value="foo"> foo
-        <input type="reset" value="foo"> foo
+        <input type="submit" value="foo" class="standard"> foo
+        <input type="reset" value="foo" class="standard"> foo
         <a class="button" tabindex="0" href="#">foo</a> foo
         <span class="button" tabindex="0">foo</span> foo
         <label class="button" tabindex="0">foo</label> foo
@@ -150,13 +182,13 @@
         <li>Check focus</li>
       </ul>
       <div class="test">
-        <button>foo</button> <input type="text" class="narrow" value="bar">
+        <button class="standard">foo</button> <input type="text" class="narrow" value="bar">
         <button type="button">foo</button> <input type="text" class="narrow" value="bar">
-        <button type="submit">foo</button> <input type="text" class="narrow" value="bar">
-        <button type="reset">foo</button> <input type="text" class="narrow" value="bar">
+        <button type="submit" class="standard">foo</button> <input type="text" class="narrow" value="bar">
+        <button type="reset" class="standard">foo</button> <input type="text" class="narrow" value="bar">
         <input type="button" value="foo"> <input type="text" class="narrow" value="bar">
-        <input type="submit" value="foo"> <input type="text" class="narrow" value="bar">
-        <input type="reset" value="foo"> <input type="text" class="narrow" value="bar">
+        <input type="submit" value="foo" class="standard"> <input type="text" class="narrow" value="bar">
+        <input type="reset" value="foo" class="standard"> <input type="text" class="narrow" value="bar">
         <a class="button" tabindex="0" href="#">foo</a> <input type="text" class="narrow" value="bar">
         <span class="button" tabindex="0">foo</span> <input type="text" class="narrow" value="bar">
         <label class="button" tabindex="0">foo</label> <input type="text" class="narrow" value="bar">
@@ -318,13 +350,13 @@
       <p>When controls are scaled with <code>font-size</code> only<br>
         Then they all a vertically aligned similarly.</p>
       <div class="test">
-        <button class="small">foo</button> <input type="text" class="narrow small" value="bar">
+        <button class="small standard">foo</button> <input type="text" class="narrow small" value="bar">
         <button class="small" type="button">foo</button> <input type="text" class="narrow small" value="bar">
-        <button class="small" type="submit">foo</button> <input type="text" class="narrow small" value="bar">
-        <button class="small" type="reset">foo</button> <input type="text" class="narrow small" value="bar">
+        <button class="small standard" type="submit">foo</button> <input type="text" class="narrow small" value="bar">
+        <button class="small standard" type="reset">foo</button> <input type="text" class="narrow small" value="bar">
         <input class="small" type="button" value="foo"> <input type="text" class="narrow small" value="bar">
-        <input class="small" type="submit" value="foo"> <input type="text" class="narrow small" value="bar">
-        <input class="small" type="reset" value="foo"> <input type="text" class="narrow small" value="bar">
+        <input class="small standard" type="submit" value="foo"> <input type="text" class="narrow small" value="bar">
+        <input class="small standard" type="reset" value="foo"> <input type="text" class="narrow small" value="bar">
         <a class="small button" tabindex="0" href="#">foo</a> <input type="text" class="narrow small" value="bar">
         <span class="small button" tabindex="0">foo</span> <input type="text" class="narrow small" value="bar">
         <label class="small button" tabindex="0">foo</label> <input type="text" class="narrow small" value="bar">

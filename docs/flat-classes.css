@@ -681,37 +681,95 @@ https://areve.github.io/flatcss/ */
   background-color: #e0e0e0;
   color: #606060; }
 
-button.flat-button:not([type]),
-.flat-button[type=submit],
-.flat-input[type=submit] {
+button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
+.flat-button[type=submit]:not(.flat-standard):not(.flat-negative),
+.flat-input[type=submit]:not(.flat-standard):not(.flat-negative),
+.flat-button.flat-primary,
+.flat-button.flat-primary[type=reset],
+.flat-input.flat-primary[type=reset],
+.flat-input.flat-primary[type=button] {
   background-color: #0074d9;
   color: #fff; }
-  button.flat-button:not([type])[disabled],
-  .flat-button[type=submit][disabled],
-  .flat-input[type=submit][disabled] {
+  button.flat-button:not([type]):not(.flat-standard):not(.flat-negative)[disabled],
+  .flat-button[type=submit]:not(.flat-standard):not(.flat-negative)[disabled],
+  .flat-input[type=submit]:not(.flat-standard):not(.flat-negative)[disabled],
+  .flat-button.flat-primary[disabled],
+  .flat-button.flat-primary[type=reset][disabled],
+  .flat-input.flat-primary[type=reset][disabled],
+  .flat-input.flat-primary[type=button][disabled] {
     background-color: #7597b4;
     color: #eaeaea; }
-  button.flat-button:not([type]):focus, button.flat-button:not([type]):active, button.flat-button:not([type]):hover:not([disabled]),
-  .flat-button[type=submit]:focus,
-  .flat-button[type=submit]:active,
-  .flat-button[type=submit]:hover:not([disabled]), .flat-input[type=submit]:focus, .flat-input[type=submit]:active, .flat-input[type=submit]:hover:not([disabled]) {
+  button.flat-button:not([type]):not(.flat-standard):not(.flat-negative):focus, button.flat-button:not([type]):not(.flat-standard):not(.flat-negative):active, button.flat-button:not([type]):not(.flat-standard):not(.flat-negative):hover:not([disabled]),
+  .flat-button[type=submit]:not(.flat-standard):not(.flat-negative):focus,
+  .flat-button[type=submit]:not(.flat-standard):not(.flat-negative):active,
+  .flat-button[type=submit]:not(.flat-standard):not(.flat-negative):hover:not([disabled]),
+  .flat-input[type=submit]:not(.flat-standard):not(.flat-negative):focus,
+  .flat-input[type=submit]:not(.flat-standard):not(.flat-negative):active,
+  .flat-input[type=submit]:not(.flat-standard):not(.flat-negative):hover:not([disabled]),
+  .flat-button.flat-primary:focus,
+  .flat-button.flat-primary:active,
+  .flat-button.flat-primary:hover:not([disabled]),
+  .flat-button.flat-primary[type=reset]:focus,
+  .flat-button.flat-primary[type=reset]:active,
+  .flat-button.flat-primary[type=reset]:hover:not([disabled]),
+  .flat-input.flat-primary[type=reset]:focus,
+  .flat-input.flat-primary[type=reset]:active,
+  .flat-input.flat-primary[type=reset]:hover:not([disabled]),
+  .flat-input.flat-primary[type=button]:focus,
+  .flat-input.flat-primary[type=button]:active,
+  .flat-input.flat-primary[type=button]:hover:not([disabled]) {
     -webkit-filter: brightness(130%);
             filter: brightness(130%); }
 
-.flat-button[type=reset],
-.flat-input[type=reset] {
+.flat-button[type=reset]:not(.flat-standard):not(.flat-primary),
+.flat-input[type=reset]:not(.flat-standard):not(.flat-primary),
+.flat-button.flat-negative,
+.flat-input.flat-negative[type=submit],
+.flat-input.flat-negative[type=button] {
   background-color: #D64300;
   color: #fff; }
-  .flat-button[type=reset][disabled],
-  .flat-input[type=reset][disabled] {
+  .flat-button[type=reset]:not(.flat-standard):not(.flat-primary)[disabled],
+  .flat-input[type=reset]:not(.flat-standard):not(.flat-primary)[disabled],
+  .flat-button.flat-negative[disabled],
+  .flat-input.flat-negative[type=submit][disabled],
+  .flat-input.flat-negative[type=button][disabled] {
     background-color: #b38875;
     color: #eaeaea; }
-  .flat-button[type=reset]:focus, .flat-button[type=reset]:active, .flat-button[type=reset]:hover:not([disabled]),
-  .flat-input[type=reset]:focus,
-  .flat-input[type=reset]:active,
-  .flat-input[type=reset]:hover:not([disabled]) {
+  .flat-button[type=reset]:not(.flat-standard):not(.flat-primary):focus, .flat-button[type=reset]:not(.flat-standard):not(.flat-primary):active, .flat-button[type=reset]:not(.flat-standard):not(.flat-primary):hover:not([disabled]),
+  .flat-input[type=reset]:not(.flat-standard):not(.flat-primary):focus,
+  .flat-input[type=reset]:not(.flat-standard):not(.flat-primary):active,
+  .flat-input[type=reset]:not(.flat-standard):not(.flat-primary):hover:not([disabled]),
+  .flat-button.flat-negative:focus,
+  .flat-button.flat-negative:active,
+  .flat-button.flat-negative:hover:not([disabled]),
+  .flat-input.flat-negative[type=submit]:focus,
+  .flat-input.flat-negative[type=submit]:active,
+  .flat-input.flat-negative[type=submit]:hover:not([disabled]),
+  .flat-input.flat-negative[type=button]:focus,
+  .flat-input.flat-negative[type=button]:active,
+  .flat-input.flat-negative[type=button]:hover:not([disabled]) {
     -webkit-filter: brightness(130%);
             filter: brightness(130%); }
+
+
+.flat-input.flat-button[type=reset],
+.flat-input.flat-button[type=submit] {
+  background-color: #eee;
+  color: #111; }
+  
+  .flat-input.flat-button[type=reset][disabled],
+  .flat-input.flat-button[type=submit][disabled] {
+    background-color: #e0e0e0;
+    color: #606060; }
+  
+  .flat-input.flat-button[type=reset]:focus,
+  .flat-input.flat-button[type=reset]:active,
+  .flat-input.flat-button[type=reset]:hover:not([disabled]),
+  .flat-input.flat-button[type=submit]:focus,
+  .flat-input.flat-button[type=submit]:active,
+  .flat-input.flat-button[type=submit]:hover:not([disabled]) {
+    -webkit-filter: brightness(95%);
+            filter: brightness(95%); }
 
 
 .flat-input[type=checkbox],

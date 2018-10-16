@@ -74,4 +74,7 @@ $classes-toolkit: true !default;
 
 @if $classes-toolkit or $classes-all {
   .#{$classes-prefix}button { @extend %flat-button !optional; }
+  .#{$classes-prefix}primary { @extend %flat-primary !optional; }
+  .#{$classes-prefix}negative { @extend %flat-negative !optional; }
+  .#{$classes-prefix}standard { @extend %flat-standard !optional; }
 }

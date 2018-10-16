@@ -247,9 +247,13 @@ $controls__progress__color: $core__button-submit__background-color !default;
   }
   
   @if $enable-semantic-colors { 
-    button%flat-button:not([type]) ,
-    %flat-button[type=submit] ,
-    %flat-input[type=submit] {
+    button%flat-button:not([type]):not(%flat-standard):not(%flat-negative),
+    %flat-button[type=submit]:not(%flat-standard):not(%flat-negative),
+    %flat-input[type=submit]:not(%flat-standard):not(%flat-negative),
+    %flat-button%flat-primary,
+    %flat-button[type=reset]%flat-primary,
+    %flat-input[type=reset]%flat-primary,
+    %flat-input[type=button]%flat-primary {
       background-color: $core__button-submit__background-color;
       color: $core__button-submit__color;
   
@@ -265,8 +269,12 @@ $controls__progress__color: $core__button-submit__background-color !default;
       }  
     }
   
-    %flat-button[type=reset] ,
-    %flat-input[type=reset] {
+    %flat-button[type=reset]:not(%flat-standard):not(%flat-primary),
+    %flat-input[type=reset]:not(%flat-standard):not(%flat-primary),
+    %flat-button%flat-negative,
+    %flat-input[type=submit]%flat-negative,
+    %flat-input[type=button]%flat-negative 
+    {
       background-color: $core__button-reset__background-color;
       color: $core__button-reset__color;      
       &[disabled] {
@@ -277,6 +285,24 @@ $controls__progress__color: $core__button-submit__background-color !default;
       &:active,
       &:hover:not([disabled]) {
         @include highlight-2;
+      }  
+    }
+
+    %flat-button%flat-normal,
+    %flat-input[type=reset]%flat-button,
+    %flat-input[type=submit]%flat-button,
+    %flat-input[type=button]%flat-normal 
+    {
+      background-color: $core__button__background-color;
+      color: $core__button__color;      
+      &[disabled] {
+        background-color: disable-color($core__button__background-color);
+        color: disable-color($core__button__color);
+      }
+      &:focus,
+      &:active,
+      &:hover:not([disabled]) {
+        @include lowlight;
       }  
     }
   }
