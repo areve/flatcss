@@ -233,16 +233,18 @@
       </ul>
 
       <h2>Advanced</h2>
-      <p>In the dist folder of this project are multiple css files, you only need is <strong>flat.css</strong>.</p>
+      <p>In the root of this project are multiple css files, you only need <strong>flat.css</strong>. The variety is to
+        provide extra options.</p>
       <ul>
         <li><strong>flat.css</strong> - Styles all HTML5 tags and has one class <code>class="button"</code> to make
-          other things look like buttons too.</li>
-        <li><strong>flat-classes.css</strong> - It styles no HTML5 tags instead providing classes for them all. If you
-          use this instead of then add <code>class="flat-<em>tagname</em>"</code> to every tag you want to style. e.g.
-          <code>&lt;a href="#"&gt;</code> becomes <code>&lt;a href="#" class="flat-a" &gt;</code>. This version does
-          not include sanitize.css</li>
-        <li><strong>flat-colourless.css</strong> - This is for a test page only, it does not have coloured buttons.</li>
+          other things look like buttons too. You can add this to a page with no other styles and it will look like much like this documentation page.</li>
+        <li><strong>flat-core.css</strong> - It is <em>flat.css</em> without bevelled corners, shadows or
+          transitions, it does style all the elements though. Use this if you want all the control alignment features and html and intend to add your own styles. You may want to use <em>flat-theme.css</em> for reference.</li>
+        <li><strong>flat-theme.css</strong> - The bevelled corners, shadows and transitions only, use it for reference; it's maintained for testing too.</li>
       </ul>
+      <p>
+        <em>flat.css</em> is written using <a href="https://en.wikipedia.org/wiki/Sass_(stylesheet_language)">sass</a>, and is easily extended. If want to create a different theme then I suggest you use look into creating a modified version of <em>flat-theme.scss</em>. Do get in touch if you have something worth sharing.
+      </p>
       <h2>Acknowledgments</h2>
       <ul>
         <li><a href="https://picnicss.com/">Picnic CSS</a> is great, and heavily enspired me, it'd got a bit more
