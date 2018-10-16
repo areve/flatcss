@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.15
+/*! flat.csss v1.0.16
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -27,7 +27,6 @@ https://areve.github.io/flatcss/ */
 .flat-input[type=file],
 .flat-input:not([type]) {
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   position: relative;
   height: 2em;
@@ -35,51 +34,54 @@ https://areve.github.io/flatcss/ */
 
 
 .flat-input[type=file] {
-  vertical-align: baseline;
-  margin-bottom: .16em;
-  height: 2em; }
+  vertical-align: middle;
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 .flat-input[type=color],
 .flat-input[type=range], .flat-input[type=image] {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 .flat-input[type=checkbox],
 .flat-input[type=radio] {
   vertical-align: middle;
-  margin-bottom: .32em;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+  margin-bottom: -.4em;
+  margin-top: -.6em;
   height: 1.5em;
-  width: 1.5em; }
+  width: 1.5em;
+  margin-bottom: -.5em;
+  margin-top: -.5em; }
 
 
 .flat-progress {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 .flat-meter {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 .flat-output {
   vertical-align: middle;
-  margin-bottom: .32em;
+  margin-bottom: -.4em;
+  margin-top: -.6em;
   line-height: 1.9em; }
 
 .flat-label {
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   min-height: 2em; }
 
 .flat-label.flat-button {
-  vertical-align: bottom;
-  margin-bottom: .16em; }
+  vertical-align: bottom; }
 
 .flat-select,
 .flat-input[type=file],
@@ -89,7 +91,6 @@ https://areve.github.io/flatcss/ */
 .flat-button {
   margin: 0;
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   min-height: 2em;
   line-height: 2em;
@@ -660,7 +661,8 @@ https://areve.github.io/flatcss/ */
   border-style: none;
   background-color: #eee;
   color: #111;
-  padding: 0 0.9em; }
+  padding: 0 0.9em;
+  text-decoration: none; }
   .flat-input[type=submit]:focus, .flat-input[type=submit]:active, .flat-input[type=submit]:hover:not([disabled]),
   .flat-input[type=reset]:focus,
   .flat-input[type=reset]:active,
@@ -874,8 +876,8 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 .flat-input[type=color] {
   -webkit-appearance: none;
   padding: 5px;
-  width: 2em;
-  height: 2em;
+  width: 1.875em;
+  height: 1.875em;
   background-color: #fcfcfc; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     
@@ -896,7 +898,7 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 2em;
+  height: 1.875em;
   width: 12em;
   background-color: #fcfcfc; }
   

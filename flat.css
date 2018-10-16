@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.15 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.16 https://areve.github.io/flatcss/ */
 /* flat-default.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -619,7 +619,6 @@ input[type=number],
 input[type=file],
 input:not([type]) {
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   position: relative;
   height: 2em;
@@ -627,51 +626,54 @@ input:not([type]) {
 
 
 input[type=file] {
-  vertical-align: baseline;
-  margin-bottom: .16em;
-  height: 2em; }
+  vertical-align: middle;
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 input[type=color],
 input[type=range], input[type=image] {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 input[type=checkbox],
 input[type=radio] {
   vertical-align: middle;
-  margin-bottom: .32em;
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
+  margin-bottom: -.4em;
+  margin-top: -.6em;
   height: 1.5em;
-  width: 1.5em; }
+  width: 1.5em;
+  margin-bottom: -.5em;
+  margin-top: -.5em; }
 
 
 progress {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 meter {
   vertical-align: middle;
-  margin-bottom: .32em; }
+  margin-bottom: -.4em;
+  margin-top: -.6em; }
 
 
 output {
   vertical-align: middle;
-  margin-bottom: .32em;
+  margin-bottom: -.4em;
+  margin-top: -.6em;
   line-height: 1.9em; }
 
 label {
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   min-height: 2em; }
 
 label.button {
-  vertical-align: bottom;
-  margin-bottom: .16em; }
+  vertical-align: bottom; }
 
 select,
 input[type=file],
@@ -682,7 +684,6 @@ button,
 .button {
   margin: 0;
   vertical-align: baseline;
-  margin-bottom: .16em;
   display: inline-block;
   min-height: 2em;
   line-height: 2em;
@@ -1254,7 +1255,8 @@ button,
   border-style: none;
   background-color: #eee;
   color: #111;
-  padding: 0 0.9em; }
+  padding: 0 0.9em;
+  text-decoration: none; }
   input[type=submit]:focus, input[type=submit]:active, input[type=submit]:hover:not([disabled]),
   input[type=reset]:focus,
   input[type=reset]:active,
@@ -1492,8 +1494,8 @@ input[type=radio] {
 input[type=color] {
   -webkit-appearance: none;
   padding: 5px;
-  width: 2em;
-  height: 2em;
+  width: 1.875em;
+  height: 1.875em;
   background-color: #fcfcfc; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     
@@ -1514,7 +1516,7 @@ input[type=range] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 2em;
+  height: 1.875em;
   width: 12em;
   background-color: #fcfcfc; }
   
