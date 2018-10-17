@@ -46,7 +46,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
 
 @mixin svg-circle($opacity: 1, $color: $core__success__color) {
   $color--rgb: red($color) + ',' + green($color) + ',' + blue($color);
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(" + $color--rgb + "," + $opacity + ")'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(" + $color--rgb + "," + $opacity + ")'><circle cx='16' cy='16' r='14'/></svg>");
   background-repeat: no-repeat;
   background-size: 1em;
 }
@@ -68,24 +68,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
   %flat-output,
   %flat-meter,
   %flat-textarea,
-  %flat-input[type=checkbox] ,
-  %flat-input[type=radio],
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=range],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=color],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=local],
-  %flat-input[type=number],
-  %flat-input[type=file],
-  %flat-input:not([type]) {
+  %flat-input {
     border: $core__border;
     background-color: $core__control__background-color;
     color: $core__control__color;
@@ -197,6 +180,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
     }
     
     &[type=image] {
+      padding: 0;
       @if $enable-bustout-prevention {
         max-width: 100%;
         height: auto;
@@ -413,7 +397,6 @@ $controls__progress__color: $core__button-submit__background-color !default;
 
   %flat-input[type=range] {
     appearance: none;
-    height: $core__control__height * 15/16;
     width: $core__control__width;
     background-color: $core__control__background-color; // for ms
     &[disabled] ,

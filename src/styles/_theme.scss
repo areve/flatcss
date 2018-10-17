@@ -134,22 +134,7 @@ $enable-control-colors: true !default;
 %flat-output,
 %flat-meter,
 %flat-textarea,
-%flat-input:not([type]),
-%flat-input[type=text],
-%flat-input[type=search],
-%flat-input[type=range],
-%flat-input[type=tel],
-%flat-input[type=url],
-%flat-input[type=color],
-%flat-input[type=email],
-%flat-input[type=password],
-%flat-input[type=date],
-%flat-input[type=month],
-%flat-input[type=week],
-%flat-input[type=time],
-%flat-input[type=local],
-%flat-input[type=number],
-%flat-input[type=file] {
+%flat-input {
   @include theme-radius;
   @include transition;
   &:focus {

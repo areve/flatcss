@@ -1,4 +1,4 @@
-/*! flat.css v1.0.16 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.17 https://areve.github.io/flatcss/ */
 /* flat-theme.scss */
 /* _core.scss */
 /* _theme.scss */
@@ -100,44 +100,14 @@ input[type=range]::-ms-thumb {
 output,
 meter,
 textarea,
-input:not([type]),
-input[type=text],
-input[type=search],
-input[type=range],
-input[type=tel],
-input[type=url],
-input[type=color],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=local],
-input[type=number],
-input[type=file] {
+input {
   border-radius: 0.33333em;
   -webkit-transition: all .3s;
   transition: all .3s; }
   output:focus,
   meter:focus,
   textarea:focus,
-  input:not([type]):focus,
-  input[type=text]:focus,
-  input[type=search]:focus,
-  input[type=range]:focus,
-  input[type=tel]:focus,
-  input[type=url]:focus,
-  input[type=color]:focus,
-  input[type=email]:focus,
-  input[type=password]:focus,
-  input[type=date]:focus,
-  input[type=month]:focus,
-  input[type=week]:focus,
-  input[type=time]:focus,
-  input[type=local]:focus,
-  input[type=number]:focus,
-  input[type=file]:focus {
+  input:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
@@ -146,22 +116,7 @@ input[type=file] {
       output:focus,
       meter:focus,
       textarea:focus,
-      input:not([type]):focus,
-      input[type=text]:focus,
-      input[type=search]:focus,
-      input[type=range]:focus,
-      input[type=tel]:focus,
-      input[type=url]:focus,
-      input[type=color]:focus,
-      input[type=email]:focus,
-      input[type=password]:focus,
-      input[type=date]:focus,
-      input[type=month]:focus,
-      input[type=week]:focus,
-      input[type=time]:focus,
-      input[type=local]:focus,
-      input[type=number]:focus,
-      input[type=file]:focus {
+      input:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }

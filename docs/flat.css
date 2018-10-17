@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.16 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.17 https://areve.github.io/flatcss/ */
 /* flat-default.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -600,90 +600,78 @@ output,
 progress,
 meter,
 textarea,
-input[type=checkbox],
-input[type=radio],
-input[type=text],
-input[type=search],
-input[type=range],
-input[type=tel],
-input[type=url],
-input[type=color],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=local],
-input[type=number],
-input[type=file],
-input:not([type]) {
+input {
   vertical-align: baseline;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
   display: inline-block;
   position: relative;
   height: 2em;
   padding: 0 0.3em; }
 
-
 input[type=file] {
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em; }
+  margin-top: 0.15em;
+  margin-bottom: 0.15em; }
 
-
-input[type=color],
-input[type=range], input[type=image] {
+input[type=color], input[type=range] {
+  height: 1.875em;
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em; }
+  margin-top: 0.085em;
+  margin-bottom: 0.34em; }
 
-
-input[type=checkbox],
-input[type=radio] {
+input[type=image] {
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em; }
+
+input[type=checkbox], input[type=radio] {
   height: 1.5em;
   width: 1.5em;
-  margin-bottom: -.5em;
-  margin-top: -.5em; }
+  vertical-align: middle;
+  margin-top: 0.4em;
+  margin-bottom: 0.4em; }
 
 
 progress {
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em; }
+  margin-top: 0.15em;
+  margin-bottom: 0.15em; }
 
 
 meter {
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em; }
+  margin-top: 0.15em;
+  margin-bottom: 0.15em; }
 
 
 output {
   vertical-align: middle;
-  margin-bottom: -.4em;
-  margin-top: -.6em;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
   line-height: 1.9em; }
 
 label {
   vertical-align: baseline;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
   display: inline-block;
   min-height: 2em; }
 
 label.button {
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em; }
 
-select,
-input[type=file],
+select, input[type=file],
 input[type=submit],
 input[type=reset],
 input[type=button],
 button,
 .button {
-  margin: 0;
   vertical-align: baseline;
+  margin-top: 0.15em;
+  margin-bottom: 0.15em;
   display: inline-block;
   min-height: 2em;
   line-height: 2em;
@@ -694,24 +682,7 @@ select,
 output,
 meter,
 textarea,
-input[type=checkbox],
-input[type=radio],
-input[type=text],
-input[type=search],
-input[type=range],
-input[type=tel],
-input[type=url],
-input[type=color],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=local],
-input[type=number],
-input[type=file],
-input:not([type]) {
+input {
   border: 1px solid #ccc;
   background-color: #fcfcfc;
   color: #111; }
@@ -719,48 +690,14 @@ input:not([type]) {
   output[disabled],
   meter[disabled],
   textarea[disabled],
-  input[type=checkbox][disabled],
-  input[type=radio][disabled],
-  input[type=text][disabled],
-  input[type=search][disabled],
-  input[type=range][disabled],
-  input[type=tel][disabled],
-  input[type=url][disabled],
-  input[type=color][disabled],
-  input[type=email][disabled],
-  input[type=password][disabled],
-  input[type=date][disabled],
-  input[type=month][disabled],
-  input[type=week][disabled],
-  input[type=time][disabled],
-  input[type=local][disabled],
-  input[type=number][disabled],
-  input[type=file][disabled],
-  input:not([type])[disabled] {
+  input[disabled] {
     background-color: #e8e8e8;
     color: #606060; }
   select[readonly],
   output[readonly],
   meter[readonly],
   textarea[readonly],
-  input[type=checkbox][readonly],
-  input[type=radio][readonly],
-  input[type=text][readonly],
-  input[type=search][readonly],
-  input[type=range][readonly],
-  input[type=tel][readonly],
-  input[type=url][readonly],
-  input[type=color][readonly],
-  input[type=email][readonly],
-  input[type=password][readonly],
-  input[type=date][readonly],
-  input[type=month][readonly],
-  input[type=week][readonly],
-  input[type=time][readonly],
-  input[type=local][readonly],
-  input[type=number][readonly],
-  input[type=file][readonly],
-  input:not([type])[readonly] {
+  input[readonly] {
     background-color: #f0f0f0;
     color: #404040; }
 
@@ -1202,11 +1139,9 @@ input[type=search]:invalid {
 
 textarea,
 input[type=text],
-input[type=search],
-input[type=range],
+input[type=search], input[type=range],
 input[type=tel],
-input[type=url],
-input[type=color],
+input[type=url], input[type=color],
 input[type=email],
 input[type=password],
 input[type=local],
@@ -1216,17 +1151,16 @@ input[type=date],
 input:not([type]) {
   width: 12em; }
 
-
 input[type=time],
 input[type=number] {
   width: 6em; }
-
 
 input[type=file] {
   border: none;
   padding: 0; }
 
 input[type=image] {
+  padding: 0;
   max-width: 100%;
   height: auto;
   cursor: default; }
@@ -1391,9 +1325,7 @@ input.button[type=submit] {
     -webkit-filter: brightness(95%);
             filter: brightness(95%); }
 
-
-input[type=checkbox],
-input[type=radio] {
+input[type=checkbox], input[type=radio] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -1459,37 +1391,35 @@ input[type=checkbox][readonly]:required:before {
   background-repeat: no-repeat;
   background-size: 1em; }
 
-
 input[type=radio] {
   border-radius: 50%; }
   input[type=radio]::before {
     border-radius: 50%;
     background-position: 50% 50%;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(17,17,17,0)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(17,17,17,0)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
   input[type=radio]:checked::before {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(17,17,17,1)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(17,17,17,1)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
   input[type=radio]:required:checked:before {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(0,138,0,1)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(0,138,0,1)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
   
   input[type=radio][disabled]:before {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(96,96,96,1)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(96,96,96,1)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
   input[type=radio][disabled]:required:before {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(106,146,106,1)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(106,146,106,1)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
   input[type=radio][readonly]:required:before {
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(77,129,77,1)'><circle cx='15.5' cy='15.5' r='14'/></svg>");
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='rgba(77,129,77,1)'><circle cx='16' cy='16' r='14'/></svg>");
     background-repeat: no-repeat;
     background-size: 1em; }
-
 
 input[type=color] {
   -webkit-appearance: none;
@@ -1498,30 +1428,23 @@ input[type=color] {
   height: 1.875em;
   background-color: #fcfcfc; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    
     input[type=color] {
       padding: 1px 3px; } }
-  
   input[type=color][disabled] {
     background-color: #e8e8e8; }
-  
   input[type=color][readonly] {
     background-color: #f0f0f0; }
   input[type=color]:focus, input[type=color]:hover:not([disabled]):not([readonly]) {
     -webkit-filter: brightness(95%);
             filter: brightness(95%); }
 
-
 input[type=range] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  height: 1.875em;
   width: 12em;
   background-color: #fcfcfc; }
-  
-  input[type=range][disabled],
-  input[type=range][readonly] {
+  input[type=range][disabled], input[type=range][readonly] {
     opacity: .5; }
   input[type=range]:active::-webkit-slider-thumb, input[type=range]:hover:not([disabled])::-webkit-slider-thumb {
     -webkit-filter: brightness(130%);
@@ -1926,43 +1849,14 @@ input[type=range]::-ms-thumb {
 output,
 meter,
 textarea,
-input:not([type]),
-input[type=text],
-input[type=search],
-input[type=range],
-input[type=tel],
-input[type=url],
-input[type=color],
-input[type=email],
-input[type=password],
-input[type=date],
-input[type=month],
-input[type=week],
-input[type=time],
-input[type=local],
-input[type=number],
-input[type=file] {
+input {
   border-radius: 0.33333em;
   -webkit-transition: all .3s;
   transition: all .3s; }
   output:focus,
   meter:focus,
   textarea:focus,
-  input:not([type]):focus,
-  input[type=text]:focus,
-  input[type=search]:focus,
-  input[type=range]:focus,
-  input[type=tel]:focus,
-  input[type=url]:focus, input[type=color]:focus,
-  input[type=email]:focus,
-  input[type=password]:focus,
-  input[type=date]:focus,
-  input[type=month]:focus,
-  input[type=week]:focus,
-  input[type=time]:focus,
-  input[type=local]:focus,
-  input[type=number]:focus,
-  input[type=file]:focus {
+  input:focus {
     outline: none;
     -webkit-box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
             box-shadow: 0 0 0 4px rgba(0, 116, 217, 0.5);
@@ -1971,33 +1865,16 @@ input[type=file] {
       output:focus,
       meter:focus,
       textarea:focus,
-      input:not([type]):focus,
-      input[type=text]:focus,
-      input[type=search]:focus,
-      input[type=range]:focus,
-      input[type=tel]:focus,
-      input[type=url]:focus, input[type=color]:focus,
-      input[type=email]:focus,
-      input[type=password]:focus,
-      input[type=date]:focus,
-      input[type=month]:focus,
-      input[type=week]:focus,
-      input[type=time]:focus,
-      input[type=local]:focus,
-      input[type=number]:focus,
-      input[type=file]:focus {
+      input:focus {
         -webkit-box-shadow: none;
                 box-shadow: none;
         outline: 4px solid rgba(0, 116, 217, 0.5); } }
 
-input[type=image],
-input[type=color] {
+input[type=image], input[type=color] {
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3); }
 
-
-input[type=checkbox],
-input[type=radio], input[type=image] {
+input[type=checkbox], input[type=radio], input[type=image] {
   -webkit-transition: all .3s;
   transition: all .3s; }
   input[type=checkbox]:focus,
