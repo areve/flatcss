@@ -97,7 +97,7 @@ $enable-control-colors: true !default;
 
 %flat-label%flat-button:focus-within {
   @include focus-border;
-  @include highlight;
+  @include lowlight;
 }
 
 %flat-input[type=file]::-webkit-file-upload-button {

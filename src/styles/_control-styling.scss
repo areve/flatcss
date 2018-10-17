@@ -390,23 +390,6 @@ $controls__progress__color: $core__button-submit__background-color !default;
     }
   }
 
-  %flat-input[type=checkbox],
-  %flat-input[type=radio] {
-    &:required {
-      &::before {
-        //@include validation-highlight;
-        //TODO 
-        //border-left-width: $core__border-width;
-        //border-left-color: $core__border-color; // TODO could use SVG check and cross instead
-      }
-    }
-    &:invalid {
-      &::before {
-        //@include validation-highlight($core__error__color);
-      }
-    }
-  }
-
   %flat-input[type=color] {
     -webkit-appearance: none;
     padding: 5px;
@@ -573,24 +556,6 @@ $controls__progress__color: $core__button-submit__background-color !default;
     }
     &:invalid::-webkit-file-upload-button {
       @include validation-highlight($core__error__color);
-    }
-  }
-
-  %flat-label%flat-button {
-    position: relative;
-    overflow: hidden; // only for input:file wrap
-    [type=file] {
-      cursor: inherit;
-      display: block;
-      font-size: 999px;
-      filter: alpha(opacity=0);
-      min-height: 100%;
-      min-width: 100%;
-      opacity: 0;
-      position: absolute;
-      right: 0;
-      text-align: right;
-      top: 0;
     }
   }
 }
