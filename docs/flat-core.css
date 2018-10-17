@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.19 https://areve.github.io/flatcss/ */
+/*! flat.css v1.0.20 https://areve.github.io/flatcss/ */
 /* flat-core.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -1728,8 +1728,7 @@ dt {
 figure {
   margin: 1em 0;
   border: 1px solid #ccc;
-  padding: 1em;
-  overflow-x: auto; }
+  padding: 1em; }
 
 figcaption {
   font-style: italic; }

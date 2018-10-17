@@ -76,9 +76,6 @@
     @include content-block;
     border: $core__border;
     padding: $core__container__padding-size;
-    @if $enable-bustout-prevention {
-      overflow-x: auto;
-    }
   }
   
   %flat-figcaption {
