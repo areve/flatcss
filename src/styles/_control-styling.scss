@@ -84,19 +84,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
   }
 
   %flat-textarea,
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=number],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=local],
-  %flat-input:not([type]) {
+  %flat-input {
     //border-left: $core__control__validation--border-width solid;
     &:optional {
       @include valid-background(0);
@@ -129,23 +117,16 @@ $controls__progress__color: $core__button-submit__background-color !default;
   %flat-input[type=time],
   %flat-input[type=number],
   %flat-input[type=search] {
+    background-image: none;
+    &:focus:valid {
+      background-image: none;
+    }
+    &:focus:invalid {
+      background-image: none;
+    }
     &:optional {
       background-position: calc(100% - 2em) .5em;
     }    
-    &[minlength],
-    &[maxlength],
-    &[max],
-    &[min],
-    &[pattern],
-    &:required {
-      background-image: none;
-      &:focus:valid {
-        background-image: none;
-      }
-      &:focus:invalid {
-        background-image: none;
-      }
-    }
     &:invalid {
       background-image: none;
     }
