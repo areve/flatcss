@@ -1083,7 +1083,8 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 
 .flat-pre {
   padding: 1em 1.5em;
-  background-color: #eed; }
+  background-color: #eed;
+  overflow-x: auto; }
   .flat-pre .flat-code {
     padding: 0; }
 

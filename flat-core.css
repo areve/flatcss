@@ -1701,7 +1701,8 @@ p, pre, address, blockquote {
 
 pre {
   padding: 1em 1.5em;
-  background-color: #eed; }
+  background-color: #eed;
+  overflow-x: auto; }
   pre code {
     padding: 0; }
 
