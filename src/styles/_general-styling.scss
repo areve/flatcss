@@ -1,13 +1,13 @@
 /* _general-styling.scss */
 @mixin section-block {
   @if $enable-styling {
-    margin: $core__vertical-padding-size 0; 
+    margin: $core__vertical-padding-size 0;
   }
 }
 
 @mixin content-block {
   @if $enable-styling {
-    margin: $core__container__padding-size 0; 
+    margin: $core__container__padding-size 0;
   }
 }
 
@@ -29,44 +29,49 @@
   %flat-h4 { font-size: $core__h4__font-size; line-height: 1.2em; }
   %flat-h5 { font-size: $core__h5__font-size; line-height: 1.2em; }
   %flat-h6 { font-size: $core__h6__font-size; line-height: 1.2em; }
-  
+
   // semantic blocks
-  %flat-p, %flat-pre, %flat-address, %flat-blockquote { 
+  %flat-p, %flat-pre, %flat-address, %flat-blockquote {
     @include section-block;
   }
 
   %flat-pre {
     padding: $core__vertical-padding-size $core__indent-size;
     background-color: $core__code__background-color;
+
+    @if $enable-bustout-prevention {
+      overflow-x: auto;
+    }
+
     %flat-code {
       padding: 0;
     }
   }
-  
+
   %flat-blockquote, %flat-address {
     padding: $core__vertical-padding-size $core__indent-size;
     font-style: italic;
   }
-  
+
   // lists
-  %flat-ul, %flat-ol { 
+  %flat-ul, %flat-ol {
     @include content-block;
     padding-left: $core__indent-size--bullet;
   }
-  
-  %flat-dl { 
+
+  %flat-dl {
     @include content-block;
   }
-  
-  %flat-dt, %flat-dd { 
+
+  %flat-dt, %flat-dd {
     @include content-block;
-  
+
     padding-left: $core__indent-size;
     + %flat-dd {
       margin-top: -$core__container__padding-size;
     }
   }
-  
+
   %flat-dt {
     font-weight: bold;
   }
@@ -76,19 +81,16 @@
     @include content-block;
     border: $core__border;
     padding: $core__container__padding-size;
-    @if $enable-bustout-prevention {
-      overflow-x: auto;
-    }
   }
-  
+
   %flat-figcaption {
     font-style: italic;
   }
 
   // layout
   %flat-hr {
-    margin-top: $core__vertical-padding-size; 
-    margin-bottom: $core__vertical-padding-size; 
+    margin-top: $core__vertical-padding-size;
+    margin-bottom: $core__vertical-padding-size;
     border: $core__border;
     border-width: 0 0 $core__border-width 0;
   }
@@ -97,62 +99,62 @@
   %flat-q {
     font-style: italic;
   }
-  
+
   %flat-del {
-    @if $enable-semantic-colors { 
+    @if $enable-semantic-colors {
       color: $core__error__color;
     }
   }
-  
+
   %flat-ins {
-    @if $enable-semantic-colors { 
+    @if $enable-semantic-colors {
       color: $core__success__color;
     }
   }
-  
+
   %flat-code, %flat-var, %flat-samp, %flat-kbd, %flat-tt  { // tt is deprecated
     padding: $core__text__padding;
-    @if $enable-semantic-colors { 
+    @if $enable-semantic-colors {
       background-color: $core__code__background-color;
     }
   }
-  
+
   %flat-samp, %flat-kbd, %flat-var {
-    @if $enable-semantic-colors { 
+    @if $enable-semantic-colors {
       background-color: $core__samp-kbd-var__background-color;
     }
   }
-  
+
   %flat-mark {
     padding: $core__text__padding;
-    @if $enable-semantic-colors { 
+    @if $enable-semantic-colors {
       background-color: $core__mark__background-color;
     }
   }
-  
+
   // tables
   %flat-table {
     @include content-block;
     background-color: $core__even-row__background-color;
   }
-  
+
   %flat-caption {
-    margin-bottom: $core__container__padding-size / 2;   
+    margin-bottom: $core__container__padding-size / 2;
   }
-  
+
   %flat-td,
   %flat-th {
-    padding: $core__cell__padding; 
+    padding: $core__cell__padding;
     vertical-align: top;
   }
-  
-  %flat-tr:nth-child(odd) {  
+
+  %flat-tr:nth-child(odd) {
     background-color: $core__odd-row__background-color;
   }
-  
+
   %flat-th {
     background-color: $core__th__background-color;
-    color: $core__th__color;  
+    color: $core__th__color;
     text-align: left;
   }
 
@@ -164,13 +166,13 @@
     }
   }
 
-  %flat-a {  
+  %flat-a {
     // this ensures images have the correct border
     // also links split over multiple lines don't look great
     // they will still wrap if necessary
-    display: inline-block; 
-    > %flat-img, 
-    > %flat-canvas, 
+    display: inline-block;
+    > %flat-img,
+    > %flat-canvas,
     > %flat-picture {
       &:focus,
       &:active,
@@ -181,19 +183,19 @@
   }
 
   %flat-iframe {
-    border: none; 
+    border: none;
   }
-  
+
   %flat-audio {
     @if $enable-bustout-prevention {
       max-width: 100%;
     }
   }
-  
+
   %flat-noscript {
     @include section-block;
-  }  
-  
+  }
+
   // forms
   %flat-fieldset {
     @include content-block;
@@ -201,16 +203,16 @@
     padding: 0;
     padding-top: $core__container__padding-size;
   }
-  
+
   %flat-legend {
-    padding: 0; 
+    padding: 0;
   }
-  
+
   // collapsable details
   %flat-details {
     @include content-block;
   }
-  
+
   %flat-summary {
     @include content-block;
   }

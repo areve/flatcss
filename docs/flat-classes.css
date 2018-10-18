@@ -1,4 +1,4 @@
-/*! flat.csss v1.0.19
+/*! flat.csss v1.0.20
 https://areve.github.io/flatcss/ */
 /* flat-classes.scss */
 /* _core.scss */
@@ -1083,7 +1083,8 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 
 .flat-pre {
   padding: 1em 1.5em;
-  background-color: #eed; }
+  background-color: #eed;
+  overflow-x: auto; }
   .flat-pre .flat-code {
     padding: 0; }
 
@@ -1110,8 +1111,7 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 .flat-figure {
   margin: 1em 0;
   border: 1px solid #ccc;
-  padding: 1em;
-  overflow-x: auto; }
+  padding: 1em; }
 
 .flat-figcaption {
   font-style: italic; }
