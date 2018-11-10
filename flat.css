@@ -1250,7 +1250,7 @@ input[type=image] {
 
 
 output {
-  background-color: #eed; }
+  background-color: #F0F0F0; }
 
 
 textarea {
@@ -1701,7 +1701,7 @@ p, pre, address, blockquote {
 
 pre {
   padding: 1em 1.5em;
-  background-color: #eed;
+  background-color: #F0F0F0;
   overflow-x: auto; }
   pre code {
     padding: 0; }
@@ -1751,7 +1751,7 @@ ins {
 
 code, var, samp, kbd, tt {
   padding: 0.1em 0.3em;
-  background-color: #eed; }
+  background-color: #F0F0F0; }
 
 samp, kbd, var {
   background-color: #9cf; }

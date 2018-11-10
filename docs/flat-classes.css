@@ -657,7 +657,7 @@ https://areve.github.io/flatcss/ */
 
 
 .flat-output {
-  background-color: #eed; }
+  background-color: #F0F0F0; }
 
 
 .flat-textarea {
@@ -1083,7 +1083,7 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 
 .flat-pre {
   padding: 1em 1.5em;
-  background-color: #eed;
+  background-color: #F0F0F0;
   overflow-x: auto; }
   .flat-pre .flat-code {
     padding: 0; }
@@ -1133,7 +1133,7 @@ button.flat-button:not([type]):not(.flat-standard):not(.flat-negative),
 
 .flat-code, .flat-var, .flat-samp, .flat-kbd, .flat-tt {
   padding: 0.1em 0.3em;
-  background-color: #eed; }
+  background-color: #F0F0F0; }
 
 .flat-samp, .flat-kbd, .flat-var {
   background-color: #9cf; }
