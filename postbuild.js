@@ -13,10 +13,8 @@ rimraf('docs/*.js', (err) => {
 if (verbose) console.log('Creating dist')
 copyfiles([
   'docs/flat.css', 
-  'docs/flat-core.css', 
   '.'], { verbose, up: 1 }, () =>{
   minify('flat.css')
-  minify('flat-core.css')
 })
 
 function minify(path) {

@@ -237,9 +237,11 @@ $theme__control__box-shadow--focus: 0 0 0 $theme__control__border-width--focus r
 
 // table
 %flat-table {
+  %flat-shadows & {
+    box-shadow: $theme__table__box-shadow;
+  }
   %flat-styling & {
     border: $core__border;
-    box-shadow: $theme__table__box-shadow;
   }
 }
 

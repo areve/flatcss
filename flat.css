@@ -586,7 +586,7 @@ textarea,
   position: absolute;
 }
 
-/*! flat.css v1.0.22 https://areve.github.io/flatcss/ */
+/*! flat.css v1.1.0 https://areve.github.io/flatcss/ */
 /* flat-default.scss */
 /* _unsanitize.scss */
 nav ol,
@@ -1999,10 +1999,12 @@ input[type=file]:focus::-webkit-file-upload-button {
   border: 1px solid #ccc;
   padding: 0.1em 0.3em; }
 
-.flat.theme table, .flat.styling table {
-  border: 1px solid #ccc;
+.flat.theme table, .flat.shadows table {
   -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12);
           box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.12); }
+
+.flat.theme table, .flat.styling table {
+  border: 1px solid #ccc; }
 
 .flat.theme th, .flat.styling th {
   background-color: #d9edff; }
