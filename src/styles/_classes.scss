@@ -1,80 +1,12 @@
 /* _classes.scss */
 
 $classes-prefix: '' !default;
-$classes-all: false !default;
 $classes-toolkit: true !default;
 
-@if $classes-all {
-  .#{$classes-prefix}html { @extend %flat-html !optional; }
-  .#{$classes-prefix}body { @extend %flat-body !optional; }
-  .#{$classes-prefix}h1 { @extend %flat-h1 !optional; }
-  .#{$classes-prefix}h2 { @extend %flat-h2 !optional; }
-  .#{$classes-prefix}h3 { @extend %flat-h3 !optional; }
-  .#{$classes-prefix}h4 { @extend %flat-h4 !optional; }
-  .#{$classes-prefix}h5 { @extend %flat-h5 !optional; }
-  .#{$classes-prefix}h6 { @extend %flat-h6 !optional; }
-  .#{$classes-prefix}p { @extend %flat-p !optional; }
-  .#{$classes-prefix}pre { @extend %flat-pre !optional; }
-  .#{$classes-prefix}address { @extend %flat-address !optional; }
-  .#{$classes-prefix}blockquote { @extend %flat-blockquote !optional; }
-  .#{$classes-prefix}ul { @extend %flat-ul !optional; }
-  .#{$classes-prefix}ol { @extend %flat-ol !optional; }
-  .#{$classes-prefix}dl { @extend %flat-dl !optional; }
-  .#{$classes-prefix}dt { @extend %flat-dt !optional; }
-  .#{$classes-prefix}dd { @extend %flat-dd !optional; }
-  .#{$classes-prefix}figure { @extend %flat-figure !optional; }
-  .#{$classes-prefix}figcaption { @extend %flat-figcaption !optional; }
-  .#{$classes-prefix}header { @extend %flat-header !optional; }
-  .#{$classes-prefix}nav { @extend %flat-nav !optional; }
-  .#{$classes-prefix}main { @extend %flat-main !optional; }
-  .#{$classes-prefix}section { @extend %flat-section !optional; }
-  .#{$classes-prefix}article { @extend %flat-article !optional; }
-  .#{$classes-prefix}aside { @extend %flat-aside !optional; }
-  .#{$classes-prefix}footer { @extend %flat-footer !optional; }
-  .#{$classes-prefix}hr { @extend %flat-hr !optional; }
-  .#{$classes-prefix}q { @extend %flat-q !optional; }
-  .#{$classes-prefix}del { @extend %flat-del !optional; }
-  .#{$classes-prefix}ins { @extend %flat-ins !optional; }
-  .#{$classes-prefix}code { @extend %flat-code !optional; }
-  .#{$classes-prefix}var { @extend %flat-var !optional; }
-  .#{$classes-prefix}kbd { @extend %flat-kbd !optional; }
-  .#{$classes-prefix}tt { @extend %flat-tt !optional; }
-  .#{$classes-prefix}samp { @extend %flat-samp !optional; }
-  .#{$classes-prefix}mark { @extend %flat-mark !optional; }
-  .#{$classes-prefix}table { @extend %flat-table !optional; }
-  .#{$classes-prefix}caption { @extend %flat-caption !optional; }
-  .#{$classes-prefix}td { @extend %flat-td !optional; }
-  .#{$classes-prefix}tr { @extend %flat-tr !optional; }
-  .#{$classes-prefix}th { @extend %flat-th !optional; }
-  .#{$classes-prefix}thead { @extend %flat-thead !optional; }
-  .#{$classes-prefix}tfoot { @extend %flat-tfoot !optional; }
-  .#{$classes-prefix}tbody { @extend %flat-tbody !optional; }
-  .#{$classes-prefix}a { @extend %flat-a !optional; }
-  .#{$classes-prefix}iframe { @extend %flat-iframe !optional; }
-  .#{$classes-prefix}audio { @extend %flat-audio !optional; }
-  .#{$classes-prefix}noscript { @extend %flat-noscript !optional; }
-  .#{$classes-prefix}fieldset { @extend %flat-fieldset !optional; }
-  .#{$classes-prefix}legend { @extend %flat-legend !optional; }
-  .#{$classes-prefix}select { @extend %flat-select !optional; }
-  .#{$classes-prefix}output { @extend %flat-output !optional; }
-  .#{$classes-prefix}progress { @extend %flat-progress !optional; }
-  .#{$classes-prefix}meter { @extend %flat-meter !optional; }
-  .#{$classes-prefix}textarea { @extend %flat-textarea !optional; }
-  .#{$classes-prefix}input { @extend %flat-input !optional; }
-  .#{$classes-prefix}label { @extend %flat-label !optional; }
-  .#{$classes-prefix}details { @extend %flat-details !optional; }
-  .#{$classes-prefix}summary { @extend %flat-summary !optional; }
-  .#{$classes-prefix}canvas { @extend %flat-canvas !optional; }
-  .#{$classes-prefix}embed { @extend %flat-embed !optional; }
-  .#{$classes-prefix}img { @extend %flat-img !optional; }
-  .#{$classes-prefix}object { @extend %flat-object !optional; }
-  .#{$classes-prefix}picture { @extend %flat-picture !optional; }
-  .#{$classes-prefix}video { @extend %flat-video !optional; }
-}
-
-@if $classes-toolkit or $classes-all {
+@if $classes-toolkit {
   .#{$classes-prefix}button { @extend %flat-button !optional; }
   .#{$classes-prefix}primary { @extend %flat-primary !optional; }
   .#{$classes-prefix}negative { @extend %flat-negative !optional; }
   .#{$classes-prefix}standard { @extend %flat-standard !optional; }
 }
+

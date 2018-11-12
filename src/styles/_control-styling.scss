@@ -64,498 +64,500 @@ $controls__progress__color: $core__button-submit__background-color !default;
 }
 
 @if $enable-styling {
-  %flat-select,
-  %flat-output,
-  %flat-meter,
-  %flat-textarea,
-  %flat-input[type=checkbox] ,
-  %flat-input[type=radio],
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=range],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=color],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=local],
-  %flat-input[type=number],
-  %flat-input[type=file],
-  %flat-input:not([type]) {
-    border: $core__border;
-    background-color: $core__control__background-color;
-    color: $core__control__color;
+  .flat {
+    %flat-select,
+    %flat-output,
+    %flat-meter,
+    %flat-textarea,
+    %flat-input[type=checkbox] ,
+    %flat-input[type=radio],
+    %flat-input[type=text],
+    %flat-input[type=search],
+    %flat-input[type=range],
+    %flat-input[type=tel],
+    %flat-input[type=url],
+    %flat-input[type=color],
+    %flat-input[type=email],
+    %flat-input[type=password],
+    %flat-input[type=date],
+    %flat-input[type=month],
+    %flat-input[type=week],
+    %flat-input[type=time],
+    %flat-input[type=local],
+    %flat-input[type=number],
+    %flat-input[type=file],
+    %flat-input:not([type]) {
+      border: $core__border;
+      background-color: $core__control__background-color;
+      color: $core__control__color;
 
-    &[disabled] {
-      background-color: disable-color($core__control__background-color);
-      color: disable-color($core__control__color);
-    }
-    &[readonly] {
-      background-color: readonly-color($core__control__background-color);
-      color: readonly-color($core__control__color);
-    }
-  }
-
-  %flat-textarea,
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=number],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=local],
-  %flat-input:not([type]) {
-    //border-left: $core__control__validation--border-width solid;
-    &:optional {
-      @include valid-background(0);
-      @include validation-highlight;
-    }    
-    &[minlength],
-    &[maxlength],
-    &[max],
-    &[min],
-    &[pattern],
-    &:required {
-      @include validation-highlight($core__success__color);
-      @include valid-background(1);
-      &:focus:valid {
-        @include valid-background(.5);
-      }
-      &:focus:invalid {
-        @include invalid-background(.4);
-      }
-    }
-    &:invalid {
-      @include validation-highlight($core__error__color);
-      @include invalid-background(.6);
-    }
-  }
-
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=number],
-  %flat-input[type=search] {
-    &:optional {
-      background-position: calc(100% - 2em) .5em;
-    }    
-    &[minlength],
-    &[maxlength],
-    &[max],
-    &[min],
-    &[pattern],
-    &:required {
-      background-image: none;
-      &:focus:valid {
-        background-image: none;
-      }
-      &:focus:invalid {
-        background-image: none;
-      }
-    }
-    &:invalid {
-      background-image: none;
-    }
-  }
-
-  %flat-textarea,
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=range],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=color],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=local],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=date],
-  %flat-input:not([type]) {
-    width: $core__control__width;
-  }
-  
-  %flat-input[type=time] ,
-  %flat-input[type=number] {
-    width: $core__control__width / 2;
-  }
-  
-  %flat-input {
-    &[type=file] {
-      border: none;  
-      padding: 0;
-    }
-    
-    &[type=image] {
-      @if $enable-bustout-prevention {
-        max-width: 100%;
-        height: auto;
-      }
-      cursor: default;
-      &:focus,
-      &:active,
-      &:hover:not([disabled]) {
-        @include highlight;
-      }
       &[disabled] {
-        filter: grayscale(85%);
+        background-color: disable-color($core__control__background-color);
+        color: disable-color($core__control__color);
       }
-    }  
-  }
-    
-  %flat-output {
-    @if $enable-semantic-colors { 
-      background-color: $core__code__background-color;
+      &[readonly] {
+        background-color: readonly-color($core__control__background-color);
+        color: readonly-color($core__control__color);
+      }
     }
-  }
-  
-  %flat-textarea {
-    display: block;
-    height: 6em;
-  }
+
+    %flat-textarea,
+    %flat-input[type=date],
+    %flat-input[type=month],
+    %flat-input[type=week],
+    %flat-input[type=time],
+    %flat-input[type=number],
+    %flat-input[type=tel],
+    %flat-input[type=url],
+    %flat-input[type=text],
+    %flat-input[type=search],
+    %flat-input[type=email],
+    %flat-input[type=password],
+    %flat-input[type=local],
+    %flat-input:not([type]) {
+      //border-left: $core__control__validation--border-width solid;
+      &:optional {
+        @include valid-background(0);
+        @include validation-highlight;
+      }    
+      &[minlength],
+      &[maxlength],
+      &[max],
+      &[min],
+      &[pattern],
+      &:required {
+        @include validation-highlight($core__success__color);
+        @include valid-background(1);
+        &:focus:valid {
+          @include valid-background(.5);
+        }
+        &:focus:invalid {
+          @include invalid-background(.4);
+        }
+      }
+      &:invalid {
+        @include validation-highlight($core__error__color);
+        @include invalid-background(.6);
+      }
+    }
+
+    %flat-input[type=date],
+    %flat-input[type=month],
+    %flat-input[type=week],
+    %flat-input[type=time],
+    %flat-input[type=number],
+    %flat-input[type=search] {
+      &:optional {
+        background-position: calc(100% - 2em) .5em;
+      }    
+      &[minlength],
+      &[maxlength],
+      &[max],
+      &[min],
+      &[pattern],
+      &:required {
+        background-image: none;
+        &:focus:valid {
+          background-image: none;
+        }
+        &:focus:invalid {
+          background-image: none;
+        }
+      }
+      &:invalid {
+        background-image: none;
+      }
+    }
+
+    %flat-textarea,
+    %flat-input[type=text],
+    %flat-input[type=search],
+    %flat-input[type=range],
+    %flat-input[type=tel],
+    %flat-input[type=url],
+    %flat-input[type=color],
+    %flat-input[type=email],
+    %flat-input[type=password],
+    %flat-input[type=local],
+    %flat-input[type=month],
+    %flat-input[type=week],
+    %flat-input[type=date],
+    %flat-input:not([type]) {
+      width: $core__control__width;
+    }
     
-  %flat-input[type=submit], 
-  %flat-input[type=reset], 
-  %flat-input[type=button], 
-  %flat-button {
-    text-decoration: none;
-    @include flat-button-styling;
-    &:focus,
-    &:active,
-    &:hover:not([disabled]) {
-      @include lowlight;
+    %flat-input[type=time] ,
+    %flat-input[type=number] {
+      width: $core__control__width / 2;
+    }
+    
+    %flat-input {
+      &[type=file] {
+        border: none;  
+        padding: 0;
+      }
+      
+      &[type=image] {
+        @if $enable-bustout-prevention {
+          max-width: 100%;
+          height: auto;
+        }
+        cursor: default;
+        &:focus,
+        &:active,
+        &:hover:not([disabled]) {
+          @include highlight;
+        }
+        &[disabled] {
+          filter: grayscale(85%);
+        }
+      }  
+    }
+      
+    %flat-output {
+      @if $enable-semantic-colors { 
+        background-color: $core__code__background-color;
+      }
+    }
+    
+    %flat-textarea {
+      display: block;
+      height: 6em;
+    }
+      
+    %flat-input[type=submit], 
+    %flat-input[type=reset], 
+    %flat-input[type=button], 
+    %flat-button {
       text-decoration: none;
-      cursor: default;
-    }
-  }
-    
-  %flat-input[type=button], 
-  %flat-button {  
-    &[disabled] {
-      background-color: disable-color($core__button__background-color);
-      color: disable-color($core__button__color);
-    }
-  }
-  
-  @if $enable-semantic-colors { 
-    button%flat-button:not([type]):not(%flat-standard):not(%flat-negative),
-    %flat-button[type=submit]:not(%flat-standard):not(%flat-negative),
-    %flat-input[type=submit]:not(%flat-standard):not(%flat-negative),
-    %flat-button%flat-primary,
-    %flat-button[type=reset]%flat-primary,
-    %flat-input[type=reset]%flat-primary,
-    %flat-input[type=button]%flat-primary {
-      background-color: $core__button-submit__background-color;
-      color: $core__button-submit__color;
-  
-      &[disabled] {
-        background-color: disable-color($core__button-submit__background-color);
-        color: disable-color($core__button-submit__color);
-      }
-
-      &:focus,
-      &:active,
-      &:hover:not([disabled]) {
-        @include highlight-2;
-      }  
-    }
-  
-    %flat-button[type=reset]:not(%flat-standard):not(%flat-primary),
-    %flat-input[type=reset]:not(%flat-standard):not(%flat-primary),
-    %flat-button%flat-negative,
-    %flat-input[type=submit]%flat-negative,
-    %flat-input[type=button]%flat-negative 
-    {
-      background-color: $core__button-reset__background-color;
-      color: $core__button-reset__color;      
-      &[disabled] {
-        background-color: disable-color($core__button-reset__background-color);
-        color: disable-color($core__button-reset__color);
-      }
-      &:focus,
-      &:active,
-      &:hover:not([disabled]) {
-        @include highlight-2;
-      }  
-    }
-
-    %flat-button%flat-normal,
-    %flat-input[type=reset]%flat-button,
-    %flat-input[type=submit]%flat-button,
-    %flat-input[type=button]%flat-normal 
-    {
-      background-color: $core__button__background-color;
-      color: $core__button__color;      
-      &[disabled] {
-        background-color: disable-color($core__button__background-color);
-        color: disable-color($core__button__color);
-      }
+      @include flat-button-styling;
       &:focus,
       &:active,
       &:hover:not([disabled]) {
         @include lowlight;
-      }  
-    }
-  }
-  
-  %flat-input[type=checkbox] ,
-  %flat-input[type=radio] {        
-    appearance: none;
-    padding: 0;
-    line-height: 0;
-    border: 0;
-    position: relative;
-    top: $core__control__height * -1/16;
-    &:before {
-      position: absolute;
-      content: ' ';
-      background-color: $core__control__background-color;
-      display: inline-block;
-      height: $core__control__height * 6/8;
-      width: $core__control__height * 6/8;
-      overflow: hidden;
-      border: $core__border;      
-    }
-
-    &:hover:not([disabled]):before {
-      @include lowlight;
-    }
-
-    &[disabled]:before {
-      background-color: disable-color($core__control__background-color);
-    }
-    &[readonly]:before {
-      background-color: readonly-color($core__control__background-color);
-    }
-  }
-
-  %flat-input[type=checkbox] {    
-    &::before {
-      background-position: 50% 50%;
-      @include svg-check(0, $core__control__color);
-    }
-    &:required:before {
-      @include svg-cross(.6);
-    }
-    &:checked::before {
-      @include svg-check(1, $core__control__color);
-    }
-    &:required:checked::before {
-      @include svg-check(1, $core__success__color);
-    }
-    &[disabled]:before {
-      @include svg-check(1, disable-color($core__control__color));
-    }
-    &[disabled]:required:before {
-      @include svg-check(1, disable-color($core__success__color));
-    }
-    &[readonly]:required:before {
-      @include svg-check(1, readonly-color($core__success__color));
-    }
-  }
-
-  %flat-input[type=radio] {        
-    border-radius: 50%;
-    &::before {
-      border-radius: 50%;
-      background-position: 50% 50%;
-      @include svg-circle(0, $core__control__color);
-    }
-    // I don't think it is possible to style 
-    // all radios red and turn them to white except for the checked one.
-    &:checked::before {
-      @include svg-circle(1, $core__control__color);
-    }
-    &:required:checked:before {
-      @include svg-circle(1, $core__success__color);
-    }
-    &[disabled]:before {
-      @include svg-circle(1, disable-color($core__control__color));
-    }
-    &[disabled]:required:before {
-      @include svg-circle(1, disable-color($core__success__color));
-    }
-    &[readonly]:required:before {
-      @include svg-circle(1, readonly-color($core__success__color));
-    }
-  }
-
-  %flat-input[type=color] {
-    -webkit-appearance: none;
-    padding: 5px;
-    width: $core__control__height * 15/16;
-    height: $core__control__height * 15/16;
-    background-color: $core__control__background-color;
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-      padding: 1px 3px; // set padding on ms and chrome
-    }
-    &[disabled] {
-      background-color: disable-color($core__control__background-color);
-    }
-    &[readonly] {
-      background-color: readonly-color($core__control__background-color);
-    }
-    &:focus,
-    &:hover:not([disabled]):not([readonly]) {
-      @include lowlight;
-    }
-  }
-
-  %flat-input[type=range] {
-    appearance: none;
-    height: $core__control__height;
-    width: $core__control__width;
-    background-color: $core__control__background-color; // for ms
-    &[disabled] ,
-    &[readonly] {
-      opacity: .5;
-    }
-    &:active,
-    &:hover:not([disabled]) {
-      &::-webkit-slider-thumb {
-        @include highlight-2;
+        text-decoration: none;
+        cursor: default;
       }
     }
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      background-color: $core__button-submit__background-color;
-      height: $core__control__height * 6/8;
-      width: $core__control__height * 6/8;  
-    }
-    &::-moz-range-track {
-      background-color: transparent;
-      border: none;
-    }
-    &:active,
-    &:hover:not([disabled]) {
-      &::-moz-range-thumb {
-        @include highlight;
+      
+    %flat-input[type=button], 
+    %flat-button {  
+      &[disabled] {
+        background-color: disable-color($core__button__background-color);
+        color: disable-color($core__button__color);
       }
     }
-    &::-moz-range-thumb {
-      background-color: $core__button-submit__background-color;
-      border: none;
-      height: $core__control__height * 6/8;
-      width: $core__control__height * 6/8;  
-    }
-    &::-ms-track {
-      background-color: transparent;
-      border: none;
-      color: transparent;        
-    }
-    &:active,
-    &:hover:not([disabled]) {
-      &::-ms-thumb {
-        @include highlight;
+    
+    @if $enable-semantic-colors { 
+      button%flat-button:not([type]):not(%flat-standard):not(%flat-negative),
+      %flat-button[type=submit]:not(%flat-standard):not(%flat-negative),
+      %flat-input[type=submit]:not(%flat-standard):not(%flat-negative),
+      %flat-button%flat-primary,
+      %flat-button[type=reset]%flat-primary,
+      %flat-input[type=reset]%flat-primary,
+      %flat-input[type=button]%flat-primary {
+        background-color: $core__button-submit__background-color;
+        color: $core__button-submit__color;
+    
+        &[disabled] {
+          background-color: disable-color($core__button-submit__background-color);
+          color: disable-color($core__button-submit__color);
+        }
+
+        &:focus,
+        &:active,
+        &:hover:not([disabled]) {
+          @include highlight-2;
+        }  
+      }
+    
+      %flat-button[type=reset]:not(%flat-standard):not(%flat-primary),
+      %flat-input[type=reset]:not(%flat-standard):not(%flat-primary),
+      %flat-button%flat-negative,
+      %flat-input[type=submit]%flat-negative,
+      %flat-input[type=button]%flat-negative 
+      {
+        background-color: $core__button-reset__background-color;
+        color: $core__button-reset__color;      
+        &[disabled] {
+          background-color: disable-color($core__button-reset__background-color);
+          color: disable-color($core__button-reset__color);
+        }
+        &:focus,
+        &:active,
+        &:hover:not([disabled]) {
+          @include highlight-2;
+        }  
+      }
+
+      %flat-button%flat-normal,
+      %flat-input[type=reset]%flat-button,
+      %flat-input[type=submit]%flat-button,
+      %flat-input[type=button]%flat-normal 
+      {
+        background-color: $core__button__background-color;
+        color: $core__button__color;      
+        &[disabled] {
+          background-color: disable-color($core__button__background-color);
+          color: disable-color($core__button__color);
+        }
+        &:focus,
+        &:active,
+        &:hover:not([disabled]) {
+          @include lowlight;
+        }  
       }
     }
-    &::-ms-thumb {
+    
+    %flat-input[type=checkbox] ,
+    %flat-input[type=radio] {        
       appearance: none;
-      background-color: $core__button-submit__background-color;
-      height: $core__control__height * .6;
-      width: $core__control__height * .6;  
-    }
-    &::-ms-fill-lower {
-      background-color: transparent;
-      border: none;
-    }
-    &::-ms-fill-upper {
-      background-color: transparent;
-      border: none;
-    }
-  }
-
-  %flat-progress {
-    width: $core__control__width;
-    appearance: none;
-    padding: 0;
-    color: $controls__progress__color; // ms uses this for color
-    @media screen and (-webkit-min-device-pixel-ratio:0) {
-      border: none; // ms and chrome add a border
-    }
-    &[value]::-moz-progress-bar { 
-      background-color: $controls__progress__color;
-    }
-    &[value]::-webkit-progress-bar {
-      background-color: $core__control__background-color;
-      border: $core__border;
-    }
-    &[value]::-webkit-progress-value {
-      background-color: $controls__progress__color;
-    }
-  }
-
-  %flat-meter {
-    // custom styling of <meter> is not working chrome 69
-    // other browser support is not great either
-    -webkit-appearance: meter; // due to a bug in chrome styling with none is not working
-    border: 0; // for ms and moz 
-    padding: 0px;
-    border-radius: 0;
-    // background is being used as a border here because border does not work correctly
-    background-color: $core__border-color; 
-    width: $core__control__width;
-  }
-
-  %flat-select {    
-    @include flat-button-styling;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    @include svg-drop-arrow;
-    background-position: calc(100% - .5em) 50%;
-    background-repeat: no-repeat;
-    background-color: $core__button__background-color;  
-    padding-right: 2em;
-    @include validation-highlight(transparent);
-    &:active,
-    &:hover:not([disabled]) {
-      @include lowlight;
-    }
-    &[disabled] {
-      background-color: disable-color($core__button__background-color);
-      color: disable-color($core__button__color);
-    }
-    &:required {
-      @include validation-highlight($core__success__color);
-    }
-    &:invalid {
-      @include validation-highlight($core__error__color);
-    }
-  }
-
-  %flat-input[type=file] {
-    &::-webkit-file-upload-button {
-      @include flat-button-styling;
+      padding: 0;
+      line-height: 0;
+      border: 0;
       position: relative;
+      top: $core__control__height * -1/16;
+      &:before {
+        position: absolute;
+        content: ' ';
+        background-color: $core__control__background-color;
+        display: inline-block;
+        height: $core__control__height * 6/8;
+        width: $core__control__height * 6/8;
+        overflow: hidden;
+        border: $core__border;      
+      }
+
+      &:hover:not([disabled]):before {
+        @include lowlight;
+      }
+
+      &[disabled]:before {
+        background-color: disable-color($core__control__background-color);
+      }
+      &[readonly]:before {
+        background-color: readonly-color($core__control__background-color);
+      }
+    }
+
+    %flat-input[type=checkbox] {    
+      &::before {
+        background-position: 50% 50%;
+        @include svg-check(0, $core__control__color);
+      }
+      &:required:before {
+        @include svg-cross(.6);
+      }
+      &:checked::before {
+        @include svg-check(1, $core__control__color);
+      }
+      &:required:checked::before {
+        @include svg-check(1, $core__success__color);
+      }
+      &[disabled]:before {
+        @include svg-check(1, disable-color($core__control__color));
+      }
+      &[disabled]:required:before {
+        @include svg-check(1, disable-color($core__success__color));
+      }
+      &[readonly]:required:before {
+        @include svg-check(1, readonly-color($core__success__color));
+      }
+    }
+
+    %flat-input[type=radio] {        
+      border-radius: 50%;
+      &::before {
+        border-radius: 50%;
+        background-position: 50% 50%;
+        @include svg-circle(0, $core__control__color);
+      }
+      // I don't think it is possible to style 
+      // all radios red and turn them to white except for the checked one.
+      &:checked::before {
+        @include svg-circle(1, $core__control__color);
+      }
+      &:required:checked:before {
+        @include svg-circle(1, $core__success__color);
+      }
+      &[disabled]:before {
+        @include svg-circle(1, disable-color($core__control__color));
+      }
+      &[disabled]:required:before {
+        @include svg-circle(1, disable-color($core__success__color));
+      }
+      &[readonly]:required:before {
+        @include svg-circle(1, readonly-color($core__success__color));
+      }
+    }
+
+    %flat-input[type=color] {
+      -webkit-appearance: none;
+      padding: 5px;
+      width: $core__control__height * 15/16;
+      height: $core__control__height * 15/16;
+      background-color: $core__control__background-color;
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        padding: 1px 3px; // set padding on ms and chrome
+      }
+      &[disabled] {
+        background-color: disable-color($core__control__background-color);
+      }
+      &[readonly] {
+        background-color: readonly-color($core__control__background-color);
+      }
+      &:focus,
+      &:hover:not([disabled]):not([readonly]) {
+        @include lowlight;
+      }
+    }
+
+    %flat-input[type=range] {
+      appearance: none;
+      height: $core__control__height;
+      width: $core__control__width;
+      background-color: $core__control__background-color; // for ms
+      &[disabled] ,
+      &[readonly] {
+        opacity: .5;
+      }
+      &:active,
+      &:hover:not([disabled]) {
+        &::-webkit-slider-thumb {
+          @include highlight-2;
+        }
+      }
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: $core__button-submit__background-color;
+        height: $core__control__height * 6/8;
+        width: $core__control__height * 6/8;  
+      }
+      &::-moz-range-track {
+        background-color: transparent;
+        border: none;
+      }
+      &:active,
+      &:hover:not([disabled]) {
+        &::-moz-range-thumb {
+          @include highlight;
+        }
+      }
+      &::-moz-range-thumb {
+        background-color: $core__button-submit__background-color;
+        border: none;
+        height: $core__control__height * 6/8;
+        width: $core__control__height * 6/8;  
+      }
+      &::-ms-track {
+        background-color: transparent;
+        border: none;
+        color: transparent;        
+      }
+      &:active,
+      &:hover:not([disabled]) {
+        &::-ms-thumb {
+          @include highlight;
+        }
+      }
+      &::-ms-thumb {
+        appearance: none;
+        background-color: $core__button-submit__background-color;
+        height: $core__control__height * .6;
+        width: $core__control__height * .6;  
+      }
+      &::-ms-fill-lower {
+        background-color: transparent;
+        border: none;
+      }
+      &::-ms-fill-upper {
+        background-color: transparent;
+        border: none;
+      }
+    }
+
+    %flat-progress {
+      width: $core__control__width;
+      appearance: none;
+      padding: 0;
+      color: $controls__progress__color; // ms uses this for color
+      @media screen and (-webkit-min-device-pixel-ratio:0) {
+        border: none; // ms and chrome add a border
+      }
+      &[value]::-moz-progress-bar { 
+        background-color: $controls__progress__color;
+      }
+      &[value]::-webkit-progress-bar {
+        background-color: $core__control__background-color;
+        border: $core__border;
+      }
+      &[value]::-webkit-progress-value {
+        background-color: $controls__progress__color;
+      }
+    }
+
+    %flat-meter {
+      // custom styling of <meter> is not working chrome 69
+      // other browser support is not great either
+      -webkit-appearance: meter; // due to a bug in chrome styling with none is not working
+      border: 0; // for ms and moz 
+      padding: 0px;
+      border-radius: 0;
+      // background is being used as a border here because border does not work correctly
+      background-color: $core__border-color; 
+      width: $core__control__width;
+    }
+
+    %flat-select {    
+      @include flat-button-styling;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      @include svg-drop-arrow;
+      background-position: calc(100% - .5em) 50%;
+      background-repeat: no-repeat;
+      background-color: $core__button__background-color;  
+      padding-right: 2em;
       @include validation-highlight(transparent);
+      &:active,
+      &:hover:not([disabled]) {
+        @include lowlight;
+      }
+      &[disabled] {
+        background-color: disable-color($core__button__background-color);
+        color: disable-color($core__button__color);
+      }
+      &:required {
+        @include validation-highlight($core__success__color);
+      }
+      &:invalid {
+        @include validation-highlight($core__error__color);
+      }
     }
-    &:active::-webkit-file-upload-button,
-    &:hover:not([disabled])::-webkit-file-upload-button {
-      @include lowlight;
-      text-decoration: none;
-      cursor: default;
-    }
-    &[disabled]::-webkit-file-upload-button {
-      cursor: not-allowed;
-      background-color: disable-color($core__button__background-color);
-      color: disable-color($core__button__color);
-    }
-    &:required::-webkit-file-upload-button {
-      @include validation-highlight($core__success__color);
-    }
-    &:invalid::-webkit-file-upload-button {
-      @include validation-highlight($core__error__color);
+
+    %flat-input[type=file] {
+      &::-webkit-file-upload-button {
+        @include flat-button-styling;
+        position: relative;
+        @include validation-highlight(transparent);
+      }
+      &:active::-webkit-file-upload-button,
+      &:hover:not([disabled])::-webkit-file-upload-button {
+        @include lowlight;
+        text-decoration: none;
+        cursor: default;
+      }
+      &[disabled]::-webkit-file-upload-button {
+        cursor: not-allowed;
+        background-color: disable-color($core__button__background-color);
+        color: disable-color($core__button__color);
+      }
+      &:required::-webkit-file-upload-button {
+        @include validation-highlight($core__success__color);
+      }
+      &:invalid::-webkit-file-upload-button {
+        @include validation-highlight($core__error__color);
+      }
     }
   }
 }

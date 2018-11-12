@@ -13,11 +13,9 @@ rimraf('docs/*.js', (err) => {
 if (verbose) console.log('Creating dist')
 copyfiles([
   'docs/flat.css', 
-  'docs/flat-theme.css', 
   'docs/flat-core.css', 
   '.'], { verbose, up: 1 }, () =>{
   minify('flat.css')
-  minify('flat-theme.css')
   minify('flat-core.css')
 })
 

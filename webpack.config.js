@@ -52,9 +52,7 @@ module.exports = (env, argv) => {
   return {
     entry: {
       'flat': './src/scripts/flat-default.js',
-      'flat-core': './src/scripts/flat-core.js',
-      'flat-theme': './src/scripts/flat-theme.js',
-      'flat-classes': './src/scripts/flat-classes.js'
+      'flat-core': './src/scripts/flat-core.js'
     },
     output: {
       path: path.resolve(__dirname, 'docs'),

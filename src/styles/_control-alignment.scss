@@ -38,93 +38,95 @@
 }
 
 @if $enable-control-alignment {
-  %flat-select,
-  %flat-output,
-  %flat-progress,
-  %flat-meter,
-  %flat-textarea,
-  %flat-input[type=checkbox] ,
-  %flat-input[type=radio],
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=range],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=color],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=local],
-  %flat-input[type=number],
-  %flat-input[type=file],
-  %flat-input:not([type]) {
-    @include vertical-align-baseline;
-    display: inline-block;
-    position: relative;
-    height: $core__control__height;
-    padding: $core__input__padding;
-  }
+  .flat {
+    %flat-select,
+    %flat-output,
+    %flat-progress,
+    %flat-meter,
+    %flat-textarea,
+    %flat-input[type=checkbox] ,
+    %flat-input[type=radio],
+    %flat-input[type=text],
+    %flat-input[type=search],
+    %flat-input[type=range],
+    %flat-input[type=tel],
+    %flat-input[type=url],
+    %flat-input[type=color],
+    %flat-input[type=email],
+    %flat-input[type=password],
+    %flat-input[type=date],
+    %flat-input[type=month],
+    %flat-input[type=week],
+    %flat-input[type=time],
+    %flat-input[type=local],
+    %flat-input[type=number],
+    %flat-input[type=file],
+    %flat-input:not([type]) {
+      @include vertical-align-baseline;
+      display: inline-block;
+      position: relative;
+      height: $core__control__height;
+      padding: $core__input__padding;
+    }
 
-  %flat-input {
-    &[type=file] {
+    %flat-input {
+      &[type=file] {
+        @include vertical-align-baseline-fix();
+        //height: $core__control__height; 
+      }
+
+      &[type=color],
+      &[type=range] {
+        $height: $core__control__height * 15/16;
+        height: $height;
+        @include vertical-align-baseline-fix($height, .2);
+      }
+
+      &[type=image] {
+        @include vertical-align-baseline-fix();
+      }
+        
+      &[type=checkbox] ,
+      &[type=radio] {
+        $height: $core__control__height * 6/8;
+        height: $height;
+        width: $height;
+        @include vertical-align-baseline-fix($height);
+      }
+    }
+
+    %flat-progress {
       @include vertical-align-baseline-fix();
-      //height: $core__control__height; 
     }
 
-    &[type=color],
-    &[type=range] {
-      $height: $core__control__height * 15/16;
-      height: $height;
-      @include vertical-align-baseline-fix($height, .2);
-    }
-
-    &[type=image] {
+    %flat-meter {
       @include vertical-align-baseline-fix();
     }
-      
-    &[type=checkbox] ,
-    &[type=radio] {
-      $height: $core__control__height * 6/8;
-      height: $height;
-      width: $height;
-      @include vertical-align-baseline-fix($height);
+
+    %flat-output {
+      @include vertical-align-baseline-fix();
+      // The text alignment is slightly off on this elment (Chrome)
+      line-height: $core__control__height * 0.95; 
     }
-  }
 
-  %flat-progress {
-    @include vertical-align-baseline-fix();
-  }
+    %flat-label {
+      @include vertical-align-baseline;
+      display: inline-block;
+      min-height: $core__control__height;
+    }
 
-  %flat-meter {
-    @include vertical-align-baseline-fix();
-  }
+    // buttons
+    %flat-label%flat-button {
+      @include vertical-align-baseline--fix-overflow-hidden;  
+    }
 
-  %flat-output {
-    @include vertical-align-baseline-fix();
-    // The text alignment is slightly off on this elment (Chrome)
-    line-height: $core__control__height * 0.95; 
-  }
-
-  %flat-label {
-    @include vertical-align-baseline;
-    display: inline-block;
-    min-height: $core__control__height;
-  }
-
-  // buttons
-  %flat-label%flat-button {
-    @include vertical-align-baseline--fix-overflow-hidden;  
-  }
-
-  %flat-select,
-  %flat-input[type=file],
-  %flat-input[type=submit], 
-  %flat-input[type=reset], 
-  %flat-input[type=button], 
-  %flat-button {
-    @include flat-button-alignment;
+    %flat-select,
+    %flat-input[type=file],
+    %flat-input[type=submit], 
+    %flat-input[type=reset], 
+    %flat-input[type=button], 
+    %flat-button {
+      @include flat-button-alignment;
+    }
   }
 }
