@@ -216,7 +216,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
       
     %flat-output {
       @if $enable-semantic-colors { 
-        background-color: $core__code__background-color;
+        background-color: $core__output__background-color;
       }
     }
     

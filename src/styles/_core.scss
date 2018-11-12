@@ -1,12 +1,12 @@
 /* _core.scss */
 
 // semantic colors
-$core__success__color: #008A00 !default; 
-$core__optional__color: #aaa !default; 
-$core__error__color: #EB0000 !default;
-$core__samp-kbd-var__background-color: #9cf !default;
-$core__code__background-color: #F0F0F0 !default; 
-$core__mark__background-color: #ff0 !default;
+$core__success__color: green !default 
+$core__error__color: crimson !default;
+$core__samp-kbd-var__background-color: lavender !default;
+$core__code__background-color: #F0F0F0 !default; // NB #F0F0F0 is the same as hljs default theme
+$core__output__background-color: oldlace;
+$core__mark__background-color: yellow !default;
 
 $core__control__validation--border-width: 3px;
 
@@ -52,9 +52,9 @@ $core__h6__font-size: 0.67em !default;
 // button colors
 $core__button__background-color: #eee;
 $core__button__color: #111;
-$core__button-submit__background-color: #0074d9 !default;
+$core__button-submit__background-color: royalblue !default;
 $core__button-submit__color: #fff !default;
-$core__button-reset__background-color: #D64300 !default;
+$core__button-reset__background-color: firebrick !default;
 $core__button-reset__color: #fff !default;
 
 // options
@@ -82,12 +82,12 @@ $enable-bustout-prevention: true !default;
 }
 
 @function disable-color($color) {
-  $target: #ccc;
-  @return  mix($target, desaturate(lighten($color, 0%), 50%), 42%);
+  $target: #fff;
+  @return  mix($target, desaturate(lighten($color, 0%), 40%), 50%);
 }
 
 @function readonly-color($color) {
-  $target: #ccc;
-  @return  mix($target, desaturate($color, 50%), 25%);
+  $target: #fff;
+  @return  mix($target, desaturate(lighten($color, 0%), 40%), 50%);
 }
 

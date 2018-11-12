@@ -244,9 +244,3 @@ $theme__control__box-shadow--focus: 0 0 0 $theme__control__border-width--focus r
     border: $core__border;
   }
 }
-
-%flat-th {
-  %flat-styling & {
-    background-color: $theme__table__color;
-  }
-}
