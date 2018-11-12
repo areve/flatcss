@@ -13,10 +13,10 @@
 
 // top level tags
 @if $enable-styling {
-  .flat {
-    %flat-html {
+  %flat-core {
+    //&%flat-html {
       font-size: 16px;
-    }
+    //}
     %flat-body {
       line-height: 1.6em;
       background-color: $core__background-color;

@@ -11,36 +11,26 @@ $theme__control__border-color--focus: $theme__link__color !default;
 $theme__control__border-width--focus: 4px !default;
 $theme__control__box-shadow--focus: 0 0 0 $theme__control__border-width--focus rgba($theme__control__border-color--focus,0.5) !default;
 
-
-$enable-radius: true !default;
-$enable-transitions: true !default;
-$enable-focus-border: true !default;
-$enable-shadows: true !default;
-$enable-link-colors: true !default;
-$enable-general-styling: true !default;
-$enable-body-colors: true !default;
-$enable-control-colors: true !default;
-
 @mixin theme-radius {
-  @if $enable-radius {  
+  %flat-bevels & {
     border-radius: $theme__general__border-radius;
-  }
+  }  
 }
 
 @mixin transition {
-  @if $enable-transitions {
+  %flat-transitions & {
     transition: all .3s;
   }
 }
 
 @mixin shadow {
-  @if ($enable-shadows) {
+  %flat-shadows & {
     box-shadow: $theme__general__box-shadow; 
   }
 }
 
 @mixin focus-border {
-  @if $enable-focus-border {
+  %flat-focus-borders & {
     outline: none;
     box-shadow: $theme__control__box-shadow--focus;
     z-index: 1;
@@ -52,216 +42,209 @@ $enable-control-colors: true !default;
   }
 }
 
+@mixin button-colors {
+  %flat-styling & {
+    background-color: $core__button__background-color;  
+    color: $core__button__color;
+  }
+}
 
-.flat-theme {
-  // links
-  %flat-a {
-    @include transition;
-    @if $enable-link-colors { 
-      color: $theme__link__color; 
-    }
-    @if $enable-general-styling {
-      text-decoration: none;
-    }
-    &:active ,
-    &:hover {
-      @if $enable-general-styling {
-        text-decoration: underline;
-      }
-    }
-    &:focus {
-      @include focus-border;
+// links
+%flat-a:not(%flat-button) {
+  @include transition;
+  %flat-styling & {
+    color: $theme__link__color; 
+    text-decoration: none;
+  }
+  &:active ,
+  &:hover {
+    %flat-styling & {
+      text-decoration: underline;
     }
   }
-
-  @mixin button-colors {
-    @if $enable-control-colors { 
-      background-color: $core__button__background-color;  
-      color: $core__button__color;
-    }
-  }
-
-
-  // buttons
-  %flat-input[type=submit], 
-  %flat-input[type=reset], 
-  %flat-input[type=button], 
-  %flat-select,
-  %flat-button {
-    @include theme-radius;
-    @include transition;
-    @include shadow;
-    &:focus {
-      @include focus-border;
-    }
-  }
-
-  %flat-label%flat-button:focus-within {
+  &:focus {
     @include focus-border;
-    @include lowlight;
   }
+}
 
-  %flat-input[type=file]::-webkit-file-upload-button {
+// buttons
+%flat-input[type=submit], 
+%flat-input[type=reset], 
+%flat-input[type=button], 
+%flat-select,
+%flat-button {
+  @include theme-radius;
+  @include transition;
+  @include shadow;
+  &:focus {
+    @include focus-border;
+  }
+}
+
+%flat-label%flat-button:focus-within {
+  @include focus-border;
+  @include lowlight;
+}
+
+%flat-input[type=file]::-webkit-file-upload-button {
+  @include theme-radius; 
+  @include transition;
+  @include shadow;
+  @include button-colors;
+}
+
+%flat-input[type=file]:focus::-webkit-file-upload-button {
+  @include lowlight;
+}
+
+%flat-input[type=range] {
+  &::-webkit-slider-thumb { 
+    @include transition;
+    @include theme-radius;
+    @include shadow;
+  }
+  &::-moz-range-thumb { 
+    @include transition;
     @include theme-radius; 
-    @include transition;
-    @include shadow;
-    @include button-colors;
-  }
-  %flat-input[type=file]:focus::-webkit-file-upload-button {
-    @include lowlight;
-  }
-
-
-  %flat-input[type=range] {
-    &::-webkit-slider-thumb { 
-      @include transition;
-      @include theme-radius;
-      @include shadow;
-    }
-    &::-moz-range-thumb { 
-      @include transition;
-      @include theme-radius; 
-      @include shadow;
-    }
-    &::-ms-thumb { 
-      @include transition;
-      @include theme-radius; 
-      @include shadow;
-    }
-  }
-
-
-  // fields
-  %flat-output,
-  %flat-meter,
-  %flat-textarea,
-  %flat-input:not([type]),
-  %flat-input[type=text],
-  %flat-input[type=search],
-  %flat-input[type=range],
-  %flat-input[type=tel],
-  %flat-input[type=url],
-  %flat-input[type=color],
-  %flat-input[type=email],
-  %flat-input[type=password],
-  %flat-input[type=date],
-  %flat-input[type=month],
-  %flat-input[type=week],
-  %flat-input[type=time],
-  %flat-input[type=local],
-  %flat-input[type=number],
-  %flat-input[type=file] {
-    @include theme-radius;
-    @include transition;
-    &:focus {
-      @include focus-border;
-    }
-  }
-
-  %flat-input[type=image],
-  %flat-input[type=color] {
     @include shadow;
   }
-
-  %flat-input[type=checkbox],
-  %flat-input[type=radio],
-  %flat-input[type=image] {
+  &::-ms-thumb { 
     @include transition;
-    &:focus {
-      @include focus-border;
-    }
-  }
-
-  %flat-input[type=checkbox]:before,
-  %flat-input[type=checkbox]:after,
-  %flat-input[type=radio]:before,
-  %flat-input[type=radio]:after {
-    @include transition;
-  }
-
-  %flat-progress[value] {
-    &::-moz-progress-bar { @include theme-radius; }
-    &::-webkit-progress-bar { @include theme-radius; }
-    &::-webkit-progress-value { @include theme-radius; }
-  }
-
-  %flat-input[type=image] {
-    &[value]::-moz-progress-bar { @include transition; }
-    &[value]::-webkit-progress-bar { @include transition; }
-  }
-
-
-  // things that just want a radius
-  %flat-pre,
-  %flat-code, 
-  %flat-var, 
-  %flat-samp, 
-  %flat-kbd, 
-  %flat-tt,
-  %flat-mark {
-    @include theme-radius;
-  }
-
-  // figure theme
-  %flat-figure {
-    @include theme-radius;
+    @include theme-radius; 
     @include shadow;
   }
+}
 
-  %flat-figcaption {
+// fields
+%flat-output,
+%flat-meter,
+%flat-textarea,
+%flat-input:not([type]),
+%flat-input[type=text],
+%flat-input[type=search],
+%flat-input[type=range],
+%flat-input[type=tel],
+%flat-input[type=url],
+%flat-input[type=color],
+%flat-input[type=email],
+%flat-input[type=password],
+%flat-input[type=date],
+%flat-input[type=month],
+%flat-input[type=week],
+%flat-input[type=time],
+%flat-input[type=local],
+%flat-input[type=number],
+%flat-input[type=file] {
+  @include theme-radius;
+  @include transition;
+  &:focus {
+    @include focus-border;
+  }
+}
+
+%flat-input[type=image],
+%flat-input[type=color] {
+  @include shadow;
+}
+
+%flat-input[type=checkbox],
+%flat-input[type=radio],
+%flat-input[type=image] {
+  @include transition;
+  &:focus {
+    @include focus-border;
+  }
+}
+
+%flat-input[type=checkbox]:before,
+%flat-input[type=checkbox]:after,
+%flat-input[type=radio]:before,
+%flat-input[type=radio]:after {
+  @include transition;
+}
+
+%flat-progress[value] {
+  &::-moz-progress-bar { @include theme-radius; }
+  &::-webkit-progress-bar { @include theme-radius; }
+  &::-webkit-progress-value { @include theme-radius; }
+}
+
+%flat-input[type=image] {
+  &[value]::-moz-progress-bar { @include transition; }
+  &[value]::-webkit-progress-bar { @include transition; }
+}
+
+// things that just want a radius
+%flat-pre,
+%flat-code, 
+%flat-var, 
+%flat-samp, 
+%flat-kbd, 
+%flat-tt,
+%flat-mark {
+  @include theme-radius;
+}
+
+// figure theme
+%flat-figure {
+  @include theme-radius;
+  @include shadow;
+}
+
+%flat-figcaption {
+  %flat-styling & {
     margin-bottom: $core__container__padding-size;
   }
+}
 
-  %flat-blockquote, %flat-address {
-    @if $enable-general-styling {
-      font-style: italic;
-    }
+%flat-blockquote, %flat-address {
+  %flat-styling & {
+    font-style: italic;
   }
+}
 
-  %flat-body {
-    @if $enable-body-colors { 
-      background-color: $core__background-color;
-      color: $core__color;
-    }
-    @if $enable-general-styling {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 1em;
-      max-width: 960px;
-      margin: auto;
-      padding: 3em 3%;
-    }
+%flat-body {
+  %flat-styling & {
+    background-color: $core__background-color;
+    color: $core__color;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    max-width: 960px;
+    margin: auto;
+    padding: 3em 3%;
   }
+}
 
-
-  // forms
-  %flat-fieldset {
-    @if $enable-general-styling {
-      @include theme-radius;
-      @include shadow;
-      padding: $core__container__padding-size;
-      border: $core__border;
-    }
+// forms
+%flat-fieldset {
+  @include theme-radius;
+  @include shadow;
+  %flat-styling & {
+    padding: $core__container__padding-size;
+    border: $core__border;
   }
+}
 
-  %flat-legend {
-    @if $enable-general-styling {
-      @include theme-radius;
-      @include shadow;
-      background-color: $core__background-color;
-      border: $core__border;
-      padding: $core__text__padding; 
-    }
+%flat-legend {
+  @include theme-radius;
+  @include shadow;
+  %flat-styling & {
+    background-color: $core__background-color;
+    border: $core__border;
+    padding: $core__text__padding; 
   }
+}
 
-  // table
-  %flat-table {
-    @if $enable-general-styling {
-      border: $core__border;
-      box-shadow: $theme__table__box-shadow;
-    }
+// table
+%flat-table {
+  %flat-styling & {
+    border: $core__border;
+    box-shadow: $theme__table__box-shadow;
   }
+}
 
-  %flat-th {
+%flat-th {
+  %flat-styling & {
     background-color: $theme__table__color;
   }
 }

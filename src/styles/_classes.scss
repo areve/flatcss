@@ -1,12 +1,18 @@
 /* _classes.scss */
 
-$classes-prefix: '' !default;
-$classes-toolkit: true !default;
+.button { @extend %flat-button !optional; }
+.primary { @extend %flat-primary !optional; }
+.negative { @extend %flat-negative !optional; }
+.standard { @extend %flat-standard !optional; }
 
-@if $classes-toolkit {
-  .#{$classes-prefix}button { @extend %flat-button !optional; }
-  .#{$classes-prefix}primary { @extend %flat-primary !optional; }
-  .#{$classes-prefix}negative { @extend %flat-negative !optional; }
-  .#{$classes-prefix}standard { @extend %flat-standard !optional; }
-}
+//.flat.theme, 
+.flat 
+//.flat.core 
+{ @extend %flat-core !optional; }
+
+.flat.theme, .flat.styling { @extend %flat-styling !optional; }
+.flat.theme, .flat.shadows { @extend %flat-shadows !optional; }
+.flat.theme, .flat.transitions { @extend %flat-transitions !optional; }
+.flat.theme, .flat.bevels { @extend %flat-bevels !optional; }
+.flat.theme, .flat.focus-borders { @extend %flat-focus-borders !optional; }
 

@@ -64,7 +64,7 @@ $controls__progress__color: $core__button-submit__background-color !default;
 }
 
 @if $enable-styling {
-  .flat {
+  %flat-core {
     %flat-select,
     %flat-output,
     %flat-meter,
