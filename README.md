@@ -1,4 +1,6 @@
-<mark>This package is no longer maintained, the new version is at https://github.com/areve/flatcss2</mark>
+# This package is no longer maintained, the new version is at https://github.com/areve/flatcss2
+
+---
 
 # flat.css
 
