@@ -1,3 +1,5 @@
+<mark>This package is no longer maintained, the new version is at https://github.com/areve/flatcss2</mark>
+
 # flat.css
 
 > Write some HTML5, add **flat.css**, be happy. It is lightweight, easy to build on top of, and no javascript.
